@@ -3,7 +3,7 @@ import ResearchDashboardClient from "./dashboard-client";
 
 // This replaces the HeadContent from TanStack's __root.tsx
 export const metadata: Metadata = {
-  title: "O Paradigma Digital na Nutrição Clínica em Portugal",
+  title: "O Paradigma Digital na Nutrição Clínica",
   description: "Resultados em tempo real do estudo sobre desafios, burocracia e inovação na nutrição clínica em Portugal.",
   openGraph: {
     title: "O Paradigma Digital na Nutrição Clínica em Portugal",

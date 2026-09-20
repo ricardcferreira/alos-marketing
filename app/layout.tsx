@@ -19,8 +19,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Alos Health | Your Nutrition Care Process Assistant',
-  description: 'Streamline your Nutrition Care Process with our intuitive platform.',
+  title: 'Alos Health | O seu espaço de decisão nutricional',
+  description: 'O primeiro software construído sobre o Processo de Cuidados Nutricionais.',
 }
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
