@@ -1,3 +1,12 @@
+import FeatureSection from "@/components/lp/FeatureSection";
+import ResultsSection from "@/components/lp/ResultsSection";
+import FeatureGrid from "@/components/lp/FeatureGrid";
+import CtaSection from "@/components/lp/CtaSection";
+import TeamSection from "@/components/lp/TeamSection";
+import Hero from "@/components/lp/Hero";
+import NavBar from "@/components/lp/NavBar";
+import FaqSection from "@/components/lp/FaqSection";
+
 export const metadata = {
   title: "Estudo-Piloto | Alos Health",
   robots: {
@@ -6,22 +15,41 @@ export const metadata = {
   },
 };
 
-export default function EstudoPilotoPage() {
+export default function FeaturesSection() {
   return (
-    <main className="min-h-screen bg-[#FCFAF8] text-gray-900">
-      <div className="max-w-4xl mx-auto px-6 py-20">
-        <h1 className="text-4xl font-serif font-bold text-[#1A2E22] mb-4">
-          Estudo-Piloto: Inovação em Nutrição Clínica
-        </h1>
-        <p className="text-lg text-gray-600 mb-8">
-          Participe na validação da nossa plataforma clínica e ajude a desenhar o futuro das decisões nutricionais.
-        </p>
-        
-        {/* Scheduler / Cal.com / Calendly embed will go here */}
-        <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm min-h-[400px] flex items-center justify-center">
-          <p className="text-gray-400">Scheduler Component Placeholder</p>
-        </div>
-      </div>
+    <main className="w-full bg-cream-light py-20 space-y-20">
+      <NavBar />
+      <Hero />
+      <FeatureGrid />
+      <CtaSection/>
+      <section className="max-w-6xl mx-auto space-y-8">
+        <FeatureSection
+          reverse
+          title="A diferença entre fazer o trabalho e conseguir prová-lo."
+          description="Os dados estruturados tornam-se reportáveis e demonstráveis, perante o doente, ou perante quem gere a sua unidade. Veja, num relatório, quantos doentes reduziram risco nutricional este mês."
+          imageSrc="/high-fidelity/directory.svg" 
+          imageAlt="Preview of the Alos Health dashboard"
+        />
+        <FeatureSection
+          title="Transferências para EHR com um clique"
+          description="Registo estruturado alinhado com os sistemas de informação CID-11 e Catálogo Português de Nutrição de forma a comunicar com as infraestruturas informáticas já existentes nas instituições de saúde."
+          imageSrc="/high-fidelity/interoperability.svg" 
+          imageAlt="Preview of the Alos Health dashboard"
+        />
+      </section>
+      <ResultsSection />
+      <section className="max-w-6xl mx-auto space-y-8">
+        <FeatureSection
+          reverse
+          title="Conformidade desenvolvida para a saúde em Portugal."
+          description="Garantimos sempre que os seus dados são tratados segundo o Regulamento Geral de Proteção de Dados, protegendo a sua privacidade e a dos seus pacientes."
+          imageSrc="/portraits/clinician-woman.png" 
+          imageAlt="Preview of the Alos Health dashboard"
+        />
+      </section>
+      <CtaSection/>
+      <TeamSection/>
+      <FaqSection />
     </main>
   );
 }

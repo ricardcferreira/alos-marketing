@@ -1,26 +1,179 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --radius: 0.75rem;
+
+  --background: #F9F6F3;
+  --foreground: #212D37;
+
+  --card: #F7F0E9;
+  --card-foreground: #212D37;
+  --popover: #F7F0E9;
+  --popover-foreground: #212D37;
+  --border: #E4DCD2;
+  --input: #E4DCD2;
+
+  --alos-green: #509F54;
+  --alos-green-light: #C3E8A8;
+  --alos-blue: #3882AA;
+  --alos-blue-light: #B8DCEE;
+  --alos-yellow: #F6E376;
+  --alos-brown: #7D3E2E;
+
+  --primary-dark: #212D37;
+  --cream: #F7F0E9;
+  --cream-light: #F9F6F3;
+
+  /* Pending, same as the software app — which brand color (if either)
+     leads as the primary interactive accent hasn't been decided there
+     yet either. */
+  --primary: oklch(0.21 0.034 264.665);
+  --primary-foreground: oklch(0.985 0.002 247.839);
+  --secondary: oklch(0.967 0.003 264.542);
+  --secondary-foreground: oklch(0.21 0.034 264.665);
+  --muted: oklch(0.967 0.003 264.542);
+  --muted-foreground: oklch(0.551 0.027 264.364);
+  --accent: oklch(0.967 0.003 264.542);
+  --accent-foreground: oklch(0.21 0.034 264.665);
+  --destructive: oklch(0.577 0.245 27.325);
+  --ring: oklch(0.707 0.022 261.325);
 }
 
 @theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-clearface);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-alos-brown: var(--alos-brown);
+  --color-alos-green: var(--alos-green);
+  --color-alos-blue: var(--alos-blue);
+  --color-alos-yellow: var(--alos-yellow);
+  --color-alos-green-light: var(--alos-green-light);
+  --color-alos-blue-light: var(--alos-blue-light);
+  
+  /* ---> NEW MISSING MAPPINGS <--- */
+  --color-cream: var(--cream);
+  --color-cream-light: var(--cream-light);
+  --color-primary-dark: var(--primary-dark);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-alos-brown: var(--alos-brown);
+  --color-alos-green: var(--alos-green);
+  --color-alos-blue: var(--alos-blue);
+  --color-alos-yellow: var(--alos-yellow);
+  --color-alos-green-light: var(--alos-green-light);
+  --color-alos-blue-light: var(--alos-blue-light);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  border-color: var(--border);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-family: var(--font-serif), serif;
+  font-size: 2.25rem; /* text-4xl */
+  line-height: 2.5rem;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  scroll-margin-top: 5rem;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.25rem; /* text-4xl */
+    line-height: 1;
+  }
+}
+
+h2 {
+  font-family: var(--font-serif), serif;
+  font-size: 1.75rem;
+  color: var(--primary-dark);
+  letter-spacing: -0.05em;
+}
+
+h3 {
+  font-family: var(--font-serif), serif;
+  font-size: 1.5rem; /* text-2xl */
+  line-height: 2rem;
+  scroll-margin-top: 5rem;
+}
+
+h4 {
+  font-family: var(--font-serif), serif;
+  font-size: 1.25rem; /* text-xl */
+  line-height: 1.75rem;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  scroll-margin-top: 5rem;
+}
+
+p {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.875rem; /* text-sm */
+  line-height: 1.25rem; /* leading-5 */
+  color: var(--primary-dark);
+}
+
+p:not(:first-child) {
+  margin-top: 1.5rem;
+}
+
+blockquote {
+  margin-top: 1.5rem;
+  border-left: 2px solid #d1d5db;
+  padding-left: 1.5rem;
+  font-style: italic;
+  color: #6b7280;
+}
+
+/* Remove arrows/spinners from number inputs */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
