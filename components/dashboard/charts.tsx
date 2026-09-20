@@ -169,7 +169,7 @@ export function LikertStacked({
         />
         <Tooltip
           contentStyle={tooltipStyle}
-          formatter={(v: number, n: string) => [`${v}%`, n]}
+          formatter={(v: any, n: any) => [`${v}%`, n]}
         />
         <RLegend
           wrapperStyle={{ fontSize: 11, paddingTop: 8 }}
