@@ -16,20 +16,12 @@ export default function Hero() {
           Transforme o seu raciocínio clínico em dados estruturados e<br></br>codificados. Sem blocos de texto-livre. Sem trabalho repetitivo.<br></br>Desenhado para dar à profissão o valor que merece.
         </p></span>
         
-        <div className="flex justify-center gap-4">
         <CalButton 
-          calLink="https://cal.com/aloshealth/conversa-inicial"
-          className="inline-flex cursor-pointer items-center justify-center bg-alos-yellow text-alos-brown hover:bg-alos-brown hover:text-white transition-colors font-medium rounded-sm px-3 py-2 text-xs"
-        />
-
-        {/* BUTTON */}
-        <Link
-          href="#" 
-          className="inline-flex items-center justify-center bg-alos-green-light text-alos-green hover:bg-alos-green hover:text-white transition-colors font-medium rounded-sm px-3 py-2 text-xs"
+          calLink="https://cal.com/aloshealth/agendar-demonstracao"
+          variant="secondary"
         >
-          Reservar o meu lugar
-        </Link>
-        </div>
+          Agendar Demonstração
+        </CalButton>
         
       </div>
     </section>

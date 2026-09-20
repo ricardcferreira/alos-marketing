@@ -3,7 +3,7 @@ import React from 'react';
 export function ResearchSection() {
   return (
     <section className="max-w-6xl mx-auto px-6 md:px-0">
-      <div className="w-full flex items-center justify-between mb-12 pb-4">
+      <div className="w-full flex mb-12 pb-4">
           {/* --- SECTION HEADER --- */}
           <p className="text-[0.95rem] font-semibold text-primary-dark tracking-tight">
             Investigação em Saúde Digital

@@ -18,9 +18,11 @@ export default function Hero() {
         
         <div className="flex justify-center gap-4">
         <CalButton 
-          calLink="https://cal.com/aloshealth/conversa-inicial"
-          className="inline-flex cursor-pointer items-center justify-center bg-alos-yellow text-alos-brown hover:bg-alos-brown hover:text-white transition-colors font-medium rounded-sm px-3 py-2 text-xs"
-        />
+              calLink="https://cal.com/aloshealth/conversa-inicial" 
+              variant="primary"
+            >
+              Conversa Inicial
+        </CalButton>
 
         {/* BUTTON */}
         <Link
