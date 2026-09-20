@@ -50,9 +50,9 @@ export function TabCruzada({ rows, isLoading }: { rows: Row[]; isLoading: boolea
       <aside className="hidden lg:block w-56 shrink-0 pt-2">
         <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-8">Índice</p>
         <div className="sticky top-8 flex flex-col space-y-3">
-          <a href="#dor" className="text-sm font-light text-foreground/70 hover:text-primary transition-colors">1. Dor e Frustração</a>
-          <a href="#concorrencia" className="text-sm font-light text-foreground/70 hover:text-primary transition-colors">2. Análise da Concorrência</a>
-          <a href="#business" className="text-sm font-light text-foreground/70 hover:text-primary transition-colors">3. Business Intelligence</a>
+          <a href="#dor" className="text-sm font-light text-foreground/70 hover:text-primary transition-colors">Dor e Frustração</a>
+          <a href="#concorrencia" className="text-sm font-light text-foreground/70 hover:text-primary transition-colors">Análise da Concorrência</a>
+          <a href="#business" className="text-sm font-light text-foreground/70 hover:text-primary transition-colors">Business Intelligence</a>
         </div>
       </aside>
 
@@ -62,7 +62,7 @@ export function TabCruzada({ rows, isLoading }: { rows: Row[]; isLoading: boolea
         {/* SECTION 1: Pain & Burnout */}
         <div id="dor" className="scroll-mt-12">
           <SectionHeading 
-            eyebrow="1. Dor e Frustração" 
+            eyebrow="Dor e Frustração" 
             title="O Impacto do Escalonamento no Desgaste Profissional" 
             description="Como o aumento do volume de trabalho e as tarefas administrativas afetam a saúde mental e retenção na área."
           />
@@ -79,7 +79,7 @@ export function TabCruzada({ rows, isLoading }: { rows: Row[]; isLoading: boolea
         {/* SECTION 2: Competitor Analysis */}
         <div id="concorrencia" className="scroll-mt-12">
           <SectionHeading 
-            eyebrow="2. Análise da Concorrência" 
+            eyebrow="Análise da Concorrência" 
             title="Onde o Ecossistema Atual Falha" 
             description="Identificação direta das lacunas nas ferramentas de software clínico atualmente em uso no mercado."
           />
@@ -96,7 +96,7 @@ export function TabCruzada({ rows, isLoading }: { rows: Row[]; isLoading: boolea
         {/* SECTION 3: Business Intelligence */}
         <div id="business" className="scroll-mt-12">
           <SectionHeading 
-            eyebrow="3. Business Intelligence" 
+            eyebrow="Business Intelligence" 
             title="Disposição a Pagar e Adoção Tecnológica" 
             description="Mapeamento financeiro e prioridades de features por segmento de mercado para definição da estratégia Go-to-Market."
           />

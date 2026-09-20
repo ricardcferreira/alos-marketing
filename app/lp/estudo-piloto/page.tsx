@@ -6,6 +6,7 @@ import TeamSection from "@/components/lp/TeamSection";
 import Hero from "@/components/lp/Hero";
 import NavBar from "@/components/lp/NavBar";
 import FaqSection from "@/components/lp/FaqSection";
+import { Footer } from "@/components/landing/footer";
 
 export const metadata = {
   title: "Estudo-Piloto | Alos Health",
@@ -50,6 +51,7 @@ export default function FeaturesSection() {
       <CtaSection/>
       <TeamSection/>
       <FaqSection />
+      <Footer />
     </main>
   );
 }

@@ -37,15 +37,15 @@ export function SectionHeading({
   description?: string;
 }) {
   return (
-    <div>
-      <p className="text-xs font-medium uppercase tracking-tighter text-primary-dark">
+    <div className="flex flex-col">
+      <span className="text-xs uppercase tracking-tighter text-primary-dark/80">
         {eyebrow}
-      </p>
-      <h2 className="mt-2 text-xl tracking-tight sm:text-3xl">
+      </span>
+      <span className="text-[1.2rem] mt-1 font-medium text-primary-dark">
         {title}
-      </h2>
+      </span>
       {description ? (
-        <p className="mt-2 max-w-2xl text-primary-dark">{description}</p>
+        <p className="mt-2 max-w-2xl text-xs text-primary-dark">{description}</p>
       ) : null}
     </div>
   );

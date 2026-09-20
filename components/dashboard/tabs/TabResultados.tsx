@@ -60,11 +60,11 @@ export function TabResultados({ rows, isLoading }: { rows: Row[]; isLoading: boo
       <aside className="hidden lg:block w-56 shrink-0 pt-2">
         <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-8">Índice</p>
         <div className="sticky top-8 flex flex-col space-y-3">
-          <a href="#demografia" className="text-sm font-light text-foreground/70 hover:text-primary transition-colors">1. Demografia</a>
-          <a href="#atividade" className="text-sm font-light text-foreground/70 hover:text-primary transition-colors">2. Atividade Clínica</a>
-          <a href="#desafios" className="text-sm font-light text-foreground/70 hover:text-primary transition-colors">3. Desafios Profissionais</a>
-          <a href="#ecossistema" className="text-sm font-light text-foreground/70 hover:text-primary transition-colors">4. Ecossistema Digital</a>
-          <a href="#inovacao" className="text-sm font-light text-foreground/70 hover:text-primary transition-colors">5. Inovação</a>
+          <a href="#demografia" className="text-sm font-light text-foreground/70 hover:text-primary transition-colors">Demografia</a>
+          <a href="#atividade" className="text-sm font-light text-foreground/70 hover:text-primary transition-colors">Atividade Clínica</a>
+          <a href="#desafios" className="text-sm font-light text-foreground/70 hover:text-primary transition-colors">Desafios Profissionais</a>
+          <a href="#ecossistema" className="text-sm font-light text-foreground/70 hover:text-primary transition-colors">Ecossistema Digital</a>
+          <a href="#inovacao" className="text-sm font-light text-foreground/70 hover:text-primary transition-colors">Inovação</a>
         </div>
       </aside>
 
@@ -72,7 +72,7 @@ export function TabResultados({ rows, isLoading }: { rows: Row[]; isLoading: boo
       <div className="flex-1 space-y-16 min-w-0 w-full">
         {/* Secção 1: Demografia */}
         <div id="demografia" className="scroll-mt-12">
-          <SectionHeading eyebrow="1. Demografia" title="Caracterização Sociodemográfica" />
+          <SectionHeading eyebrow="Demografia" title="Caracterização Sociodemográfica" />
           <div className="mt-6 grid gap-6 lg:grid-cols-6">
             <ChartCard title="Género" className="lg:col-span-2"><DonutChart data={genero} /><Legend data={genero} /></ChartCard>
             <ChartCard title="Faixa etária" className="lg:col-span-2"><DonutChart data={idade} /><Legend data={idade} /></ChartCard>
@@ -83,7 +83,7 @@ export function TabResultados({ rows, isLoading }: { rows: Row[]; isLoading: boo
 
         {/* Secção 2: Contexto Clínico */}
         <div id="atividade" className="scroll-mt-12">
-          <SectionHeading eyebrow="2. Atividade Clínica" title="Enquadramento e Volume de Prática" />
+          <SectionHeading eyebrow="Atividade Clínica" title="Enquadramento e Volume de Prática" />
           <div className="mt-6 grid gap-6 lg:grid-cols-6">
             <ChartCard title="Regime de consultas" className="lg:col-span-2"><PieChartFlat data={regime} /><Legend data={regime} /></ChartCard>
             <ChartCard title="Volume semanal" subtitle="Consultas de nutrição por semana" className="lg:col-span-2"><ColumnChart data={consultas} /></ChartCard>
@@ -93,13 +93,13 @@ export function TabResultados({ rows, isLoading }: { rows: Row[]; isLoading: boo
 
         {/* Secção 3: Desafios */}
         <div id="desafios" className="scroll-mt-12">
-          <SectionHeading eyebrow="3. Desafios Profissionais" title="Perceção sobre o Exercício da Profissão" description="Distribuição de respostas (escala Likert)." />
+          <SectionHeading eyebrow="Desafios Profissionais" title="Perceção sobre o Exercício da Profissão" description="Distribuição de respostas (escala Likert)." />
           <Card className="mt-6 border-border-300"><CardContent className="pt-6"><LikertStacked data={desafios} height={300} /></CardContent></Card>
         </div>
 
         {/* Secção 4: Ecossistema Atual */}
         <div id="ecossistema" className="scroll-mt-12">
-          <SectionHeading eyebrow="4. Ecossistema Digital" title="Avaliação das Ferramentas Atuais" />
+          <SectionHeading eyebrow="Ecossistema Digital" title="Avaliação das Ferramentas Atuais" />
           <div className="mt-6 grid gap-6 lg:grid-cols-6">
             <ChartCard title="Software / Ferramentas em uso" subtitle="Múltipla escolha" className="lg:col-span-4"><HorizontalBarChart data={software} height={240} /></ChartCard>
             <ChartCard title="Satisfação global" subtitle="Com as ferramentas atuais" className="lg:col-span-2"><PieChartFlat data={satisfacao} /><Legend data={satisfacao} /></ChartCard>
@@ -110,7 +110,7 @@ export function TabResultados({ rows, isLoading }: { rows: Row[]; isLoading: boo
 
         {/* Secção 5: Inovação */}
         <div id="inovacao" className="scroll-mt-12">
-          <SectionHeading eyebrow="5. Inovação" title="Adoção de Novas Ferramentas" />
+          <SectionHeading eyebrow="Inovação" title="Adoção de Novas Ferramentas" />
           <div className="mt-6 grid gap-6 lg:grid-cols-6">
             <ChartCard title="Visão sobre o futuro da prática clínica" subtitle="A importância da tecnologia" className="lg:col-span-6"><LikertStacked data={futuroLikert} height={320} /></ChartCard>
             <ChartCard title="Fatores decisivos para adoção" subtitle="O que pesa na decisão" className="lg:col-span-3"><HorizontalBarChart data={fatores} height={240} /></ChartCard>

@@ -30,7 +30,7 @@ export default function CalButton({ calLink, className, children, ...props }: Ca
       )}
       {...props}
     >
-      {children || "Conversa Inicial"}
+      {children || "Conversa inicial"}
     </button>
   );
 }

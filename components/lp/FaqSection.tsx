@@ -30,11 +30,12 @@ export default function FaqSection() {
   };
 
   return (
-    <section className="w-full max-w-4xl mx-auto">
+    <section className="w-full max-w-6xl mx-auto">
       
       {/* HEADER BLOCK */}
-      <div className="text-center mb-12">
+      <div className="text-center mb-12 space-y-2">
         <h1 className="font-serif text-3xl text-primary-dark tracking-tight">FAQ</h1>
+        <span><p className="text-[0.95rem] text-primary-dark leading-relaxed">Perguntas sobre a participação no Estudo-Piloto.</p></span>
       </div>
 
       {/* FAQ CARD CONTAINER */}
@@ -50,7 +51,7 @@ export default function FaqSection() {
                 onClick={() => toggleFaq(index)}
                 className="w-full flex items-center cursor-pointer justify-between py-6 text-left focus:outline-none transition-colors hover:text-alos-green group"
               >
-                <span className="font-serif text-xl text-primary-dark group-hover:text-alos-green transition-colors pr-8">
+                <span className="text-[1rem] font-semibold text-primary-dark/80 leading-relaxed">
                   {faq.question}
                 </span>
                 

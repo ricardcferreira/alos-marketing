@@ -53,10 +53,13 @@ function DashboardInner() {
 
       {/* Header */}
       <section className="bg-gradient-to-tl from-white via-alos-green-light to-alos-green">
-        <div className="mx-auto max-w-6xl px-6 py-12 sm:py-20">
+        <div className="mx-auto max-w-6xl px-6 py-12 sm:py-20 space-y-2">
           <h1 className="mt-4 max-w-4xl text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl font-serif">
-            O Paradigma Digital na Nutrição Clínica: <br></br> Desafios, Burocracia e Inovação
+            O Paradigma Digital na Nutrição Clínica
           </h1>
+          <span className="mt-4 max-w-4xl text-xl font-regular leading-tight tracking-tight text-white">
+            Questionário
+          </span>
         </div>
       </section>
 
@@ -72,7 +75,7 @@ function DashboardInner() {
         </div>
       ) : (
         <section className="mx-auto max-w-6xl px-6 py-10 mb-8">
-          <Tabs defaultValue="resultados" className="w-full">
+          <Tabs defaultValue="estudo" className="w-full">
             <TabsList className="mb-8 w-full overflow-x-auto whitespace-nowrap flex-nowrap">
               <TabsTrigger value="estudo">O Estudo</TabsTrigger>
               <TabsTrigger value="resultados">Resultados Preliminares</TabsTrigger>
