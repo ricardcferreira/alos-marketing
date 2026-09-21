@@ -1,12 +1,29 @@
 import Link from "next/link";
+import { FiInstagram, FiLinkedin, FiYoutube, FiSlack } from "react-icons/fi";
 
 export function Footer() {
   return (
     <footer className="w-full py-16 bg-cream-light">
       <div className="w-full max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-16">
-        {/* Column 1: Brand & Contact */}
-        <div className="flex flex-col space-y-2">
-          <div className="flex flex-col">
+        
+        {/* Column 1: Brand, Contact & Socials */}
+        <div className="flex flex-col space-y-4">
+          {/* SOCIAL ICONS */}
+          <div className="flex items-center gap-4 pl-2 pt-2 text-primary-dark">
+            <a href="https://join.slack.com/t/alos-health/shared_invite/zt-4an27wbis-JCOJHbUmPJ2SEeq_DUejqA" target="_blank" rel="noopener noreferrer" className="opacity-80 transition-opacity">
+              <FiSlack className="w-4 h-4" />
+            </a>
+            <a href="https://www.instagram.com/aloshealth/" target="_blank" rel="noopener noreferrer" className="opacity-80 transition-opacity">
+              <FiInstagram className="w-4 h-4" />
+            </a>
+            <a href="https://www.linkedin.com/company/alos-health/" target="_blank" rel="noopener noreferrer" className="opacity-80 transition-opacity">
+              <FiLinkedin className="w-4 h-4" />
+            </a>
+            <a href="https://www.youtube.com/@aloshealth" target="_blank" rel="noopener noreferrer" className="opacity-80 transition-opacity">
+              <FiYoutube className="w-4 h-4" />
+            </a>
+          </div>
+          <div className="flex flex-col space-y-2">
             {/* BRAND LOGO */}
             <Link href="/" className="flex items-center gap-1">
               <img 
@@ -18,16 +35,17 @@ export function Footer() {
                 Alos <span className="italic">Health</span>
               </span>
             </Link>
-          </div>
-          
-          <div className="flex flex-col space-y-1 text-[0.7rem] pl-2 font-light text-black">
-            <div className="pt-1 flex flex-col space-y-1">
-              <span className="text-primary-dark text-xs tracking-tighter">O seu espaço de decisão nutricional</span>
-              <a href="mailto:hello@aloshealth.com" className="hover:text-primary-dark text-primary-dark/60 transition-colors">
-                hello@aloshealth.com
-              </a>
+            
+            <div className="flex flex-col space-y-1 text-[0.7rem] pl-2 font-light text-black">
+              <div className="pt-1 flex flex-col space-y-1">
+                <span className="text-primary-dark text-xs tracking-tighter">O seu espaço de decisão nutricional</span>
+                <a href="mailto:hello@aloshealth.com" className="hover:text-primary-dark text-primary-dark/60 transition-colors">
+                  hello@aloshealth.com
+                </a>
+              </div>
             </div>
           </div>
+
         </div>
 
         <div className="flex space-x-10">
