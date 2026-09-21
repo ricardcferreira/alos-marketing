@@ -8,7 +8,7 @@ export default function Hero() {
         
         {/* HEADING */}
         <h1 className="font-serif text-3xl text-primary-dark tracking-tight">
-          O seu espaço espaço <br></br> de decisão nutricional
+          O seu espaço<br></br>de decisão nutricional
         </h1>
         
         {/* PARAGRAPH */}
