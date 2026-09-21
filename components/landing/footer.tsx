@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="w-full py-16">
+    <footer className="w-full py-16 bg-cream-light">
       <div className="w-full max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-16">
         {/* Column 1: Brand & Contact */}
         <div className="flex flex-col space-y-2">
@@ -26,9 +26,6 @@ export function Footer() {
               <a href="mailto:hello@aloshealth.com" className="hover:text-primary-dark text-primary-dark/60 transition-colors">
                 hello@aloshealth.com
               </a>
-              <button className="text-left hover:text-primary-dark/80 cursor-pointer text-primary-dark transition-colors w-fit">
-                Cookie Preferences
-              </button>
             </div>
           </div>
         </div>
@@ -49,6 +46,7 @@ export function Footer() {
             <div className="flex flex-col space-y-3 text-[0.75rem] font-light text-black">
               <Link href="#" className="hover:text-gray-700 text-black transition-colors w-fit">Privacy Policy</Link>
               <Link href="#" className="hover:text-gray-700 text-black transition-colors w-fit">Terms of Service</Link>
+              <Link href="#" className="hover:text-gray-700 text-black transition-colors w-fit">Cookie Preferences</Link>
               <Link href="#" className="hover:text-gray-700 text-black transition-colors w-fit">Usage Policy</Link>
             </div>
           </div>

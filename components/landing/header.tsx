@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { DialogTrigger } from "@/components/ui/dialog";
 
 export function Header() {
   return (
