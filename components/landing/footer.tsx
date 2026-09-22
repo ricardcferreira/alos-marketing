@@ -8,21 +8,6 @@ export function Footer() {
         
         {/* Column 1: Brand, Contact & Socials */}
         <div className="flex flex-col space-y-4">
-          {/* SOCIAL ICONS */}
-          <div className="flex items-center gap-4 pl-2 pt-2 text-primary-dark">
-            <a href="https://join.slack.com/t/alos-health/shared_invite/zt-4an27wbis-JCOJHbUmPJ2SEeq_DUejqA" target="_blank" rel="noopener noreferrer" className="opacity-80 transition-opacity">
-              <FiSlack className="w-4 h-4" />
-            </a>
-            <a href="https://www.instagram.com/aloshealth/" target="_blank" rel="noopener noreferrer" className="opacity-80 transition-opacity">
-              <FiInstagram className="w-4 h-4" />
-            </a>
-            <a href="https://www.linkedin.com/company/alos-health/" target="_blank" rel="noopener noreferrer" className="opacity-80 transition-opacity">
-              <FiLinkedin className="w-4 h-4" />
-            </a>
-            <a href="https://www.youtube.com/@aloshealth" target="_blank" rel="noopener noreferrer" className="opacity-80 transition-opacity">
-              <FiYoutube className="w-4 h-4" />
-            </a>
-          </div>
           <div className="flex flex-col space-y-2">
             {/* BRAND LOGO */}
             <Link href="/" className="flex items-center gap-1">
@@ -46,15 +31,26 @@ export function Footer() {
             </div>
           </div>
 
+        {/* SOCIALS */}
+          <div className="flex flex-col pl-2 mt-6 space-y-2">
+          <span className="text-primary-dark text-xs tracking-tighter">Encontre-nos em</span>
+          <div className="flex flex space-x-3 text-[0.75rem] font-light text-black">
+            <Link href="https://join.slack.com/t/alos-health/shared_invite/zt-4an27wbis-JCOJHbUmPJ2SEeq_DUejqA" className="hover:text-gray-700 text-black transition-colors w-fit">Slack</Link>
+            <Link href="https://www.instagram.com/aloshealth/" className="hover:text-gray-700 text-black transition-colors w-fit">Instagram</Link>
+            <Link href="https://www.linkedin.com/company/alos-health/" className="hover:text-gray-700 text-black transition-colors w-fit">LinkedIn</Link>
+            <Link href="https://www.youtube.com/@aloshealth" className="hover:text-gray-700 text-black transition-colors w-fit">Youtube</Link>
+          </div>
+          </div>
+
         </div>
 
         <div className="flex space-x-10">
-          {/* Column 2: Compliance */}
+          {/* Column 2: Recursos */}
           <div className="flex flex-col space-y-5 md:pl-8">
-            <p className="text-[0.95rem] text-primary-dark uppercase tracking-tight">Compliance</p>
+            <p className="text-[0.95rem] text-primary-dark uppercase tracking-tight">Recursos</p>
             <div className="flex flex-col space-y-3 text-[0.75rem] font-light text-black">
-              <Link href="#" className="hover:text-gray-700 text-black transition-colors w-fit">Safety</Link>
-              <Link href="https://www.notion.so/Compliance-35ff3de024038097b62bd4204b09beb2?source=copy_link" className="hover:text-gray-700 text-black transition-colors w-fit">Trust Dashboard</Link>
+              <Link href="https://support.aloshealth.com/" className="hover:text-gray-700 text-black transition-colors w-fit">Central de Ajuda</Link>
+              <Link href="https://www.notion.so/Compliance-35ff3de024038097b62bd4204b09beb2?source=copy_link" className="hover:text-gray-700 text-black transition-colors w-fit">Central de Confiança</Link>
             </div>
           </div>
 
@@ -62,10 +58,10 @@ export function Footer() {
           <div className="flex flex-col space-y-5">
             <p className="text-[0.95rem] text-primary-dark uppercase tracking-tight">Legal</p>
             <div className="flex flex-col space-y-3 text-[0.75rem] font-light text-black">
-              <Link href="#" className="hover:text-gray-700 text-black transition-colors w-fit">Privacy Policy</Link>
-              <Link href="#" className="hover:text-gray-700 text-black transition-colors w-fit">Terms of Service</Link>
-              <Link href="#" className="hover:text-gray-700 text-black transition-colors w-fit">Cookie Preferences</Link>
-              <Link href="#" className="hover:text-gray-700 text-black transition-colors w-fit">Usage Policy</Link>
+              <Link href="https://app.notion.com/p/Information-to-be-provided-where-personal-data-are-collected-from-the-data-subject-360f3de0240380b78a43f14dfd82d8b3?source=copy_link" className="hover:text-gray-700 text-black transition-colors w-fit">Política de Privacidade</Link>
+              <Link href="https://app.notion.com/p/Product-Liability-Directive-360f3de0240380428d41df711f38130d?source=copy_link" className="hover:text-gray-700 text-black transition-colors w-fit">Termos de Serviço</Link>
+              <Link href="https://app.notion.com/p/ePrivacy-Directive-360f3de024038072afd4f6850e117dd5?source=copy_link" className="hover:text-gray-700 text-black transition-colors w-fit">Política de Cookies</Link>
+              <Link href="https://app.notion.com/p/Processor-360f3de02403809987c7f7af73d70b81?source=copy_link" className="hover:text-gray-700 text-black transition-colors w-fit">Política de Utilização</Link>
             </div>
           </div>
         </div>
