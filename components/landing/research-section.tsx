@@ -12,7 +12,7 @@ export function ResearchSection() {
       
         {/* --- CLICKABLE PUBLICATION BLOCK --- */}
         <a 
-          href="https://aloshealth.com/resources/research" 
+          href="https://aloshealth.com/resources/research/o-paradigma-digital" 
           target="_blank" 
           rel="noopener noreferrer"
           className="group block"

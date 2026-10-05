@@ -35,7 +35,6 @@ export function Footer() {
           <div className="flex flex-col pl-2 mt-6 space-y-2">
           <span className="text-primary-dark text-xs tracking-tighter">Encontre-nos em</span>
           <div className="flex flex space-x-3 text-[0.75rem] font-light text-black">
-            <Link href="https://join.slack.com/t/alos-health/shared_invite/zt-4an27wbis-JCOJHbUmPJ2SEeq_DUejqA" className="hover:text-gray-700 text-black transition-colors w-fit">Slack</Link>
             <Link href="https://www.instagram.com/aloshealth/" className="hover:text-gray-700 text-black transition-colors w-fit">Instagram</Link>
             <Link href="https://www.linkedin.com/company/alos-health/" className="hover:text-gray-700 text-black transition-colors w-fit">LinkedIn</Link>
             <Link href="https://www.youtube.com/@aloshealth" className="hover:text-gray-700 text-black transition-colors w-fit">Youtube</Link>
@@ -49,6 +48,7 @@ export function Footer() {
           <div className="flex flex-col space-y-5 md:pl-8">
             <p className="text-[0.95rem] text-primary-dark uppercase tracking-tight">Recursos</p>
             <div className="flex flex-col space-y-3 text-[0.75rem] font-light text-black">
+              <Link href="https://aloshealth.com/resources/research" className="hover:text-gray-700 text-black transition-colors w-fit">Investigação</Link>
               <Link href="https://support.aloshealth.com/" className="hover:text-gray-700 text-black transition-colors w-fit">Central de Ajuda</Link>
               <Link href="https://www.notion.so/Compliance-35ff3de024038097b62bd4204b09beb2?source=copy_link" className="hover:text-gray-700 text-black transition-colors w-fit">Central de Confiança</Link>
             </div>
