@@ -32,10 +32,17 @@ export default function CalButton({
       data-cal-link={calLink}
       data-cal-config='{"layout":"month_view"}'
       className={cn(
-        "inline-flex items-center justify-center font-medium rounded-full transition-colors",
-        variant === "primary" 
-          ? "inline-flex cursor-pointer items-center justify-center bg-alos-yellow text-alos-brown hover:bg-alos-brown hover:text-white transition-colors font-medium rounded-sm px-3 py-2 text-xs"
-          : "inline-flex cursor-pointer items-center justify-center bg-alos-yellow text-alos-brown hover:bg-alos-brown hover:text-white transition-colors font-medium rounded-sm px-3 py-2 text-xs",
+        // Classes Base Estruturais (comuns a todas as variantes)
+        "inline-flex cursor-pointer items-center justify-center font-medium rounded-lg px-3 py-2 text-sm transition-colors border",
+        
+        // Classes de Variante (apenas cores)
+        variant === "primary" && 
+          "bg-alos-green-light text-alos-green hover:bg-alos-green border-alos-green hover:text-white",
+        
+        variant === "secondary" && 
+          "bg-alos-yellow text-alos-brown hover:bg-alos-brown border-transparent hover:text-white",
+        
+        // Classes injetadas via props (ex: margens)
         className
       )}
       {...props}

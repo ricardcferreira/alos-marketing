@@ -1,28 +1,46 @@
-import Link from "next/link";
+"use client";
+
+import Image from "next/image";
 import CalButton from "@/components/lp/CalButton";
 
-export default function Hero() {
+export default function HeroSection() {
   return (
-    <section className="w-full flex flex-col items-center justify-center text-center mt-16">
-      <div className="max-w-3xl mx-auto">
+    <section className="relative w-full min-h-[85vh] md:min-h-[90vh] flex items-center rounded-b-[2rem] md:rounded-b-[4rem] overflow-hidden bg-primary-dark">
+      
+      {/* IMAGEM DE FUNDO */}
+      <Image
+        src="/landscape/hero-bg.svg" // Substitua pelo caminho correto da sua imagem
+        alt="Alos Health Nutricionista em consulta"
+        fill
+        className="object-cover object-center"
+        priority // Essencial no Hero para não haver lag de carregamento (LCP)
+      />
+
+      {/* OVERLAY DE GRADIENTE (Escuro à esquerda para o texto, transparente à direita) */}
+      <div className="absolute inset-0 pointer-events-none" />
+
+      {/* CONTENTOR DE CONTEÚDO */}
+      {/* O pt-32 garante que o texto não fica escondido debaixo da NavBar flutuante */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pt-32 pb-24 flex flex-col items-start">
         
-        {/* HEADING */}
-        <h1 className="font-serif text-3xl text-primary-dark tracking-tight">
-          O seu espaço de<br></br>decisão nutricional
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif mb-2 text-white tracking-tight leading-[1.05] max-w-2xl">
+          O seu espaço de <br className="hidden md:block" />
+          decisão nutricional
         </h1>
         
-        {/* PARAGRAPH */}
-        <span><p className="text-base md:text-lg text-primary-dark/80 leading-relaxed max-w-2xl mx-auto mb-8 mt-2">
-          Transforme o seu raciocínio clínico em dados estruturados e<br></br>codificados. Sem blocos de texto-livre. Sem trabalho repetitivo.<br></br>Desenhado para dar à profissão o valor que merece.
-        </p></span>
-        
+        <span className="text-base md:text-lg text-white/90 mb-6 leading-relaxed max-w-lg">
+          Transforme o seu raciocínio clínico em dados estruturados e codificados. 
+          Sem blocos de texto-livre. Sem trabalho repetitivo. Desenhado para dar à 
+          profissão o valor que merece.
+        </span>
+
         <CalButton 
-          calLink="https://cal.com/aloshealth/agendar-demonstracao"
-          variant="secondary"
+          calLink="https://cal.com/aloshealth/conversa-inicial" 
+          variant="primary"
         >
-          Agendar Demonstração
+          Conversa Inicial
         </CalButton>
-        
+
       </div>
     </section>
   );

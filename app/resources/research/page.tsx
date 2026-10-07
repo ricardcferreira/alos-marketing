@@ -1,14 +1,14 @@
 import Link from "next/link";
 import { getAllResearchMeta } from "@/lib/research";
-import { Header } from "@/components/landing/header";
+import NavBar from "@/components/landing/NavBar";
 import { Footer } from "@/components/landing/footer";
 
 export default function ResearchIndexPage() {
   const studies = getAllResearchMeta();
 
   return (
-    <main className="min-h-screen bg-cream text-primary-dark font-sans flex flex-col">
-      <Header />
+    <main className="min-h-screen bg-cream-light text-primary-dark font-sans flex flex-col">
+      <NavBar />
       
       <div className="flex-grow mx-auto max-w-6xl px-6 py-20 w-full">
         
@@ -65,7 +65,7 @@ export default function ResearchIndexPage() {
                     </div>
                     <Link 
                       href={`/resources/research/${study.slug}`} 
-                      className="bg-alos-green-light text-sm text-alos-green font-medium py-1.5 px-3 cursor-pointer rounded-sm hover:bg-alos-green hover:text-white transition-colors w-fit"
+                      className="inline-flex cursor-pointer items-center justify-center w-fit font-medium rounded-lg px-3 py-2 text-sm transition-colors border bg-alos-green-light text-alos-green hover:bg-alos-green border-alos-green hover:text-white"
                     >
                       Ler Estudo Completo
                     </Link>

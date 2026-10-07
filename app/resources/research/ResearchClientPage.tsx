@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { submitStudyLead } from "@/app/actions/submitLead";
-import { Header } from "@/components/landing/header";
+import NavBar from "@/components/landing/NavBar";
 import { Footer } from "@/components/landing/footer";
 import { ResearchArticle } from "@/lib/research";
 import { X, Check } from "lucide-react";
@@ -43,11 +43,11 @@ export default function ResearchClientPage({ study }: { study: ResearchArticle }
   }).toUpperCase();
 
   return (
-    <main className="min-h-screen mt-32 bg-cream-light text-primary-dark">
-      <Header />
+    <main className="min-h-screen mt-38 bg-cream-light text-primary-dark">
+      <NavBar />
       
       {/* Article Header (Dynamic) */}
-      <div className="mx-auto max-w-3xl space-y-4 mb-12 text-center">
+      <div className="mx-auto max-w-3xl space-y-4 mb-4 text-center">
         <span className="text-xs inline-block">
           {study.type} · {formattedDate}
         </span>
@@ -56,7 +56,7 @@ export default function ResearchClientPage({ study }: { study: ResearchArticle }
         </h1>
         <button 
           onClick={() => setIsModalOpen(true)}
-          className="bg-alos-green-light text-alos-green hover:bg-alos-green hover:text-white px-3 py-1.5 cursor-pointer text-sm rounded-sm font-medium transition-colors"
+          className="inline-flex cursor-pointer items-center justify-center font-medium rounded-lg px-3 py-2 text-sm transition-colors border bg-alos-green-light text-alos-green hover:bg-alos-green border-alos-green hover:text-white"
         >
           Ler estudo completo
         </button>
