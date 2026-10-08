@@ -1,14 +1,13 @@
-import { Header } from "@/components/landing/header";
-import NavBar from "@/components/landing/NavBar";
-import HeroSection from "@/components/landing/Hero";
-import FeatureVideo from "@/components/lp/FeatureVideo";
-import ClinicalSpecialtiesTabs from "@/components/lp/ClinicalSpecialtiesTabs";
-import StickyFeatureStack from "@/components/lp/StickyFeatureStack";
-import BentoFeatures from "@/components/lp/FeatureGridThree";
-import ScrollRevealSection from "@/components/lp/LogoInMotion";
-import TeamSection from "@/components/lp/TeamSection";
-import StudySection from "@/components/lp/ResearchSection";
-import { Footer } from "@/components/landing/footer";
+import NavBar from "@/components/home-page/NavBar";
+import HeroSection from "@/components/home-page/Hero";
+import FeatureVideo from "@/components/home-page/FeatureVideo";
+import ClinicalSpecialtiesTabs from "@/components/home-page/ClinicalSpecialtiesTabs";
+import StickyFeatureStack from "@/components/home-page/StickyFeatureStack";
+import BentoFeatures from "@/components/home-page/FeatureGrid";
+import ScrollRevealSection from "@/components/home-page/LogoInMotion";
+import TeamSection from "@/components/home-page/TeamSection";
+import StudySection from "@/components/home-page/ResearchSection";
+import Footer from "@/components/home-page/Foot";
 
 export default function Home() {
   return (

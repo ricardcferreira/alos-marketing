@@ -33,7 +33,7 @@ export default function CalButton({
       data-cal-config='{"layout":"month_view"}'
       className={cn(
         // Classes Base Estruturais (comuns a todas as variantes)
-        "inline-flex cursor-pointer items-center justify-center font-medium rounded-lg px-3 py-2 text-sm transition-colors border",
+        "inline-flex cursor-pointer items-center justify-center font-medium rounded-lg px-3 py-2 text-xs md:text-xs lg:text-sm transition-colors border",
         
         // Classes de Variante (apenas cores)
         variant === "primary" && 

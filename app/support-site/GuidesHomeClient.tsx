@@ -6,7 +6,7 @@ import Link from "next/link";
 import "@/app/globals.css";
 import React from "react";
 import { Header } from "@/components/landing/header";
-import { Footer } from "@/components/landing/footer";
+import Footer from "@/components/home-page/Foot";
 
 interface CollectionWithCount {
   slug: string;

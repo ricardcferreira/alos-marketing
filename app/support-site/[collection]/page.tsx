@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { getCollectionMeta, getArticlesMeta } from "@/lib/guides";
 import CollectionGrid from "../../../components/collection/CollectionGrid";
 import { Header } from "@/components/landing/header";
-import { Footer } from "@/components/landing/footer";
+import Footer from "@/components/home-page/Foot";
 
 export default async function CollectionPage({
   params,

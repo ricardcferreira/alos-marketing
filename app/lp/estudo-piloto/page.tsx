@@ -2,11 +2,11 @@ import FeatureSection from "@/components/lp/FeatureSection";
 import ResultsSection from "@/components/lp/ResultsSection";
 import FeatureGrid from "@/components/lp/FeatureGrid";
 import CtaSection from "@/components/lp/CtaSection";
-import TeamSection from "@/components/lp/TeamSection";
+import TeamSection from "@/components/home-page/TeamSection";
 import Hero from "@/components/lp/Hero";
 import NavBar from "@/components/lp/NavBar";
 import FaqSection from "@/components/lp/FaqSection";
-import { Footer } from "@/components/landing/footer";
+import Footer from "@/components/home-page/Foot";
 
 export const metadata = {
   title: "Estudo-Piloto | Alos Health",

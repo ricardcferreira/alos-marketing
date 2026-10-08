@@ -1,20 +1,35 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
-import CalButton from "@/components/lp/CalButton";
+import CalButton from "@/components/ui/CalButton";
 
 export default function ScrollRevealSection() {
   const containerRef = useRef<HTMLDivElement>(null);
+  
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"]
   });
 
-  const xLeft = useTransform(scrollYProgress, [0, 0.8], ["0vw", "-28vw"]);
-  const xRight = useTransform(scrollYProgress, [0, 0.8], ["0vw", "28vw"]);
+  const distance = isMobile ? "20vw" : "22vw";
+  const negativeDistance = isMobile ? "-20vw" : "-22vw";
+
+  const xLeft = useTransform(scrollYProgress, [0, 0.8], ["0vw", negativeDistance]);
+  const xRight = useTransform(scrollYProgress, [0, 0.8], ["0vw", distance]);
   
   const textOpacity = useTransform(scrollYProgress, [0.1, 0.8], [0, 1]);
   const textY = useTransform(scrollYProgress, [0.1, 0.8], ["40px", "0px"]);
@@ -27,13 +42,14 @@ export default function ScrollRevealSection() {
         {/* --- TEXTO CENTRAL --- */}
         <motion.div 
           style={{ opacity: textOpacity, y: textY }}
-          className="relative z-10 flex flex-col items-center text-center max-w-4xl"
+          // Adicionado px-4 em mobile para evitar que o texto toque nas metades do logo
+          className="relative z-10 flex flex-col items-center text-center space-y-2 max-w-4xl px-4 md:px-0"
         >
-          <h2 className="text-4xl md:text-6xl lg:text-[72px] font-serif text-primary-dark tracking-tight leading-[1.05]">
-            <span className="italic">Lorem ipsum.</span>Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+          <h2 className="text-3xl md:text-4xl lg:text-6xl max-w-[85%] font-serif text-primary-dark tracking-tight leading-tight md:leading-[1.1]">
+            <span className="italic">Lorem ipsum.</span> <br></br>Ut enim ad minim<br></br>consectetur adipiscing elit
           </h2>
-          <p className="text-sm md:text-base lg:text-lg text-primary-dark/80 leading-relaxed max-w-2xl mb-6 mt-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+          <p className="text-xs md:text-sm md:leading-[1.4] mb-6 text-primary-dark max-w-[80%] md:max-w-[70%] md:max-w-2xl">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
           
           <CalButton 

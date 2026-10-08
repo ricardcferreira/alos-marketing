@@ -2,8 +2,8 @@
 
 import React, { useState } from "react";
 import { submitStudyLead } from "@/app/actions/submitLead";
-import NavBar from "@/components/landing/NavBar";
-import { Footer } from "@/components/landing/footer";
+import NavBar from "@/components/home-page/NavBar";
+import Footer from "@/components/home-page/Foot";
 import { ResearchArticle } from "@/lib/research";
 import { X, Check } from "lucide-react";
 

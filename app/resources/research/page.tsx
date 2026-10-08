@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { getAllResearchMeta } from "@/lib/research";
-import NavBar from "@/components/landing/NavBar";
-import { Footer } from "@/components/landing/footer";
+import NavBar from "@/components/home-page/NavBar";
+import Footer from "@/components/home-page/Foot";
 
 export default function ResearchIndexPage() {
   const studies = getAllResearchMeta();

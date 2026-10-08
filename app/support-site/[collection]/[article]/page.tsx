@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getCollectionMeta, getArticle, getAllArticleParams } from "@/lib/guides";
 import { Header } from "@/components/landing/header";
-import { Footer } from "@/components/landing/footer";
+import Footer from "@/components/home-page/Foot";
 import TableOfContents from "@/components/article/TableOfContents";
 
 export function generateStaticParams() {

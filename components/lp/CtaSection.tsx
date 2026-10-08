@@ -1,5 +1,5 @@
 import Link from "next/link";
-import CalButton from "@/components/lp/CalButton";
+import CalButton from "@/components/ui/CalButton";
 
 export default function CtaSection() {
   return (
