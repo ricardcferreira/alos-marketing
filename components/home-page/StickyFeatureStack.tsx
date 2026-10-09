@@ -26,7 +26,9 @@ export default function StickyFeatureStack() {
       tagBorderColor: "border-alos-green", 
       tagTextColor: "text-alos-green", 
       textColor: "text-primary-dark",
-      imageSrc: "/", 
+      imageSrc: "/icons/avaliacao.jpeg", 
+      imageScale: 3.6,
+      imageOffset: { x: 0, y: 0 },
     },
     {
       id: 2,
@@ -38,7 +40,9 @@ export default function StickyFeatureStack() {
       tagBorderColor: "border-alos-brown",
       tagTextColor: "text-alos-brown",
       textColor: "text-primary-dark", 
-      imageSrc: "/",
+      imageSrc: "/icons/intervencao.jpeg",
+      imageScale: 3.6,
+      imageOffset: { x: 8, y: 40 },
     },
     {
       id: 3,
@@ -50,7 +54,9 @@ export default function StickyFeatureStack() {
       tagBorderColor: "border-alos-blue", 
       tagTextColor: "text-alos-blue", 
       textColor: "text-primary-dark",
-      imageSrc: "/",
+      imageSrc: "/icons/monitorizacao.jpeg",
+      imageScale: 3.6,
+    imageOffset: { x: 20, y: 60 },
     },
   ];
 
@@ -84,7 +90,7 @@ export default function StickyFeatureStack() {
             {/* LEFT SIDE - COPY */}
             <div className="w-full md:w-1/2 flex flex-col p-6 md:p-12 items-start md:pr-12">
               
-              <span className={`border px-3 py-1 rounded-full text-xs font-semibold mb-6 w-fit ${feature.tagBorderColor} ${feature.tagTextColor}`}>
+              <span className={`border px-3 py-1 rounded-full text-xs md:text-sm font-semibold mb-6 w-fit ${feature.tagBorderColor} ${feature.tagTextColor}`}>
                 {feature.tag}
               </span>
 
@@ -94,7 +100,7 @@ export default function StickyFeatureStack() {
               </h2>
 
               {/* Body Text */}
-              <p className={`text-xs md:text-sm md:leading-[1.4] text-primary-dark max-w-[80%] md:max-w-[70%] md:max-w-2xl ${feature.textColor}`}>
+              <p className={`text-sm md:text-lg md:leading-[1.4] text-primary-dark max-w-[80%] md:max-w-[70%] md:max-w-2xl ${feature.textColor}`}>
                 {feature.description}
               </p>
             </div>
@@ -107,7 +113,10 @@ export default function StickyFeatureStack() {
                     src={feature.imageSrc}
                     alt={`Mockup for ${feature.title}`}
                     fill
-                    className="object-cover object-left-top"
+                    className="object-cover"
+                    style={{
+                      transform: `translate(${feature.imageOffset.x}%, ${feature.imageOffset.y}%) scale(${feature.imageScale})`,
+                    }}
                   />
                 ) : (
                   <div className="absolute inset-0 flex items-center justify-center text-center p-6 text-xs text-primary-dark">
