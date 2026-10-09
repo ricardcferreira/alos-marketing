@@ -5,7 +5,7 @@ import CalButton from "@/components/ui/CalButton";
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full min-h-[85vh] md:min-h-[90vh] flex items-top rounded-b-[2rem] md:rounded-b-[4rem] overflow-hidden bg-primary-dark">
+    <section className="relative w-full min-h-[85vh] md:min-h-[90vh] flex items-top rounded-b-[2rem] md:rounded-b-[4rem] overflow-hidden bg-cream">
       
       {/* Background Image */}
       <Image
@@ -27,7 +27,7 @@ export default function HeroSection() {
           decisão nutricional
         </h1>
         
-        <span className="text-xs md:text-sm text-white mb-4 leading-relaxed max-w-[70%] md:max-w-sm lg:max-w-md">
+        <span className="text-sm md:text-lg text-white mb-4 max-w-[70%] md:max-w-sm lg:max-w-md">
           Transforme o seu raciocínio clínico em dados estruturados e codificados. 
           Sem trabalho repetitivo.
           Desenhado para dar ao nutricionista o valor que merece.

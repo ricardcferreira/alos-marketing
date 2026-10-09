@@ -42,7 +42,7 @@ export default function StudySection() {
       <div className="flex flex-col md:flex-row justify-between items-start gap-6 md:gap-16 mb-2">
         {/* Left Title */}
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-primary-dark tracking-tight leading-tight md:leading-[1.1]">
-          <span className="italic">108 nutricionistas</span> partilharam<br className="hidden md:block" /> a sua realidade e a sua visão sobre o futuro da profissão.
+          <span className="italic">104 nutricionistas</span> partilharam<br className="hidden md:block" /> a sua realidade e a sua visão sobre o futuro da profissão.
         </h2>
         
         {/* Description*/}
