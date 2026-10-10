@@ -107,7 +107,7 @@ export default function StickyFeatureStack() {
 
             {/* RIGHT SIDE - IMAGE MOCKUP */}
             <div className="w-full md:w-1/2 flex items-center justify-center relative py-6 px-6 lg:py-10">
-              <div className="relative w-full aspect-[4/3] md:aspect-[3/3] lg:aspect-[4/3] rounded-[1.5rem] overflow-hidden bg-cream">
+              <div className="relative w-full aspect-[4/3] md:aspect-[3/3] lg:aspect-[4/3] rounded-[1.5rem] overflow-hidden bg-transparent">
                 {feature.imageSrc !== "/" ? (
                   <Image
                     src={feature.imageSrc}
