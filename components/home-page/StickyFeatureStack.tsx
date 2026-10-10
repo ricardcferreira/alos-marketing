@@ -18,45 +18,45 @@ export default function StickyFeatureStack() {
   const features = [
     {
       id: 1,
-      tag: "Avaliação Nutricional",
-      title: "Mais tempo clínico em cada consulta para o doente.",
+      tag: "Avaliação do Estado Nutricional",
+      title: "Mais tempo clínico em cada consulta.",
       description:
-        "Reduza o trabalho administrativo, e aumente a profundidade clínica, desde Questionários de Avaliação Nutricional até aos Critérios GLIM.",
+        "Do questionário de avaliação nutricional aos critérios GLIM, tudo numa só vista: composição corporal, sinais e sintomas, ingestão alimentar e marcadores biológicos. Menos trabalho administrativo, mais profundidade clínica.",
       bgColor: "bg-alos-green-light", 
       tagBorderColor: "border-alos-green", 
       tagTextColor: "text-alos-green", 
       textColor: "text-primary-dark",
-      imageSrc: "/icons/avaliacao.jpeg", 
-      imageScale: 3.6,
+      imageSrc: "/low-fidelity/avaliacao.svg", 
+      imageScale: 0.9,
       imageOffset: { x: 0, y: 0 },
     },
     {
       id: 2,
-      tag: "Diagnóstico e Intervenção",
-      title: "Fecho do ciclo de cuidados entre deteção e resolução.",
+      tag: "Diagnóstico e Intervenção Nutricional",
+      title: "Fecho do ciclo entre deteção e resolução.",
       description:
-        "O sistema sugere expressões do Catálogo Português de Nutrição para gerar a frase PES em segundos a partir das avaliações efetuadas.",
+        "A Alos sugere termos do Catálogo Português de Nutrição e compõe a frase PES (Problema, Etiologia, Sintomas) a partir das avaliações que já registou. Reveja, ajuste e valide em segundos.",
       bgColor: "bg-alos-yellow", 
       tagBorderColor: "border-alos-brown",
       tagTextColor: "text-alos-brown",
       textColor: "text-primary-dark", 
-      imageSrc: "/icons/intervencao.jpeg",
-      imageScale: 3.6,
-      imageOffset: { x: 8, y: 40 },
+      imageSrc: "/low-fidelity/diagnostico.svg",
+      imageScale: 0.9,
+      imageOffset: { x: 0, y: 0 },
     },
     {
       id: 3,
-      tag: "Monitorização",
-      title: "Monitorização visual do estado nutricional do doente.",
+      tag: "Monitorização e Avaliação",
+      title: "Impacto no progresso clínico e nutricional.",
       description:
-        "Painéis dinâmicos mostram a evolução do doente em tempo real, com correlação instantânea entre as diferentes variáveis.",
+        "Escolhe as principais métricas que mostram a evolução do doente em tempo real num painel e compare com a última consulta.",
       bgColor: "bg-alos-blue-light", 
       tagBorderColor: "border-alos-blue", 
       tagTextColor: "text-alos-blue", 
       textColor: "text-primary-dark",
-      imageSrc: "/icons/monitorizacao.jpeg",
-      imageScale: 3.6,
-    imageOffset: { x: 20, y: 60 },
+      imageSrc: "/low-fidelity/monitorizacao.svg",
+      imageScale: 0.9,
+    imageOffset: { x: 0, y: 0 },
     },
   ];
 
@@ -66,10 +66,10 @@ export default function StickyFeatureStack() {
       {/* SECTION HEADER */}
       <div className="text-center max-w-3xl flex flex-col items-center">
         <h2 className="text-2xl md:text-3xl lg:text-4xl max-w-[70%] font-serif text-primary-dark tracking-tight leading-tight md:leading-[1.1]">
-          Lorem ipsum dolor sit amet adipiscing elit
+          Do primeiro registo ao<br></br>resultado clínico.
         </h2>
         <p className="text-xs md:text-sm md:leading-[1.4] text-primary-dark max-w-[80%] md:max-w-[70%] md:max-w-2xl mx-auto">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Avaliação, diagnóstico e monitorização ligados num só fluxo: o que regista numa fase alimenta a seguinte, sem repetir dados.
         </p>
       </div>
 
@@ -81,8 +81,8 @@ export default function StickyFeatureStack() {
             style={
               !isMobile
                 ? {
-                    top: `calc(120px + ${index * 260}px)`, 
-                    marginBottom: `${(features.length - 1 - index) * 260}px`
+                    top: `calc(120px + ${index * 220}px)`, 
+                    marginBottom: `${(features.length - 1 - index) * 220}px`
                   }
                 : {}
             }
@@ -113,7 +113,7 @@ export default function StickyFeatureStack() {
                     src={feature.imageSrc}
                     alt={`Mockup for ${feature.title}`}
                     fill
-                    className="object-cover"
+                    className="object-contain"
                     style={{
                       transform: `translate(${feature.imageOffset.x}%, ${feature.imageOffset.y}%) scale(${feature.imageScale})`,
                     }}
