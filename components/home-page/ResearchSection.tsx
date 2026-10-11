@@ -6,21 +6,21 @@ export default function StudySection() {
   const stats = [
     {
       id: 1,
-      value: "51,9%",
-      boldText: "Esgotamento crítico",
-      text: "associado ao trabalho administrativo.",
+      value: "54,5%",
+      boldText: "Reportam",
+      text: "que o registo em texto livre bloqueia a análise sistemática de dados.",
     },
     {
       id: 2,
-      value: "24,1%",
-      boldText: "Taxa de Insatisfação",
-      text: "gerem duas ou mais ferramentas.",
+      value: "52,3%",
+      boldText: 'Afirmam que os atuais sistemas hospitalares',
+      text: 'são "superficiais no detalhe clínico".',
     },
     {
       id: 3,
-      value: "52,3%",
-      boldText: "Ferramentas atuais",
-      text: "superficiais no detalhe clínico",
+      value: "40,7%",
+      boldText: "Indicam o tratamento de dados",
+      text: "como a etapa que mais tempo consome.",
     },
   ];
 
@@ -29,8 +29,8 @@ export default function StudySection() {
       id: 1,
       category: "Inquérito",
       date: "Jul 23, 2026",
-      title: "O Paradigma Digital na Nutrição Clínica: Desafios, Burocracia e Inovação",
-      description: "Este estudo visa compreender os verdadeiros desafios da prática clínica dos Nutricionistas e mapear a relação entre tecnologia, tempo administrativo e perceção de valor profissional. O desenho do futuro das ferramentas de gestão e de apoio à decisão clínica permitirá devolver o foco total do nutricionista ao doente.",
+      title: "Um novo espaço de decisão nutricional",
+      description: "A ausência de uma infraestrutura digital construída especificamente para o nutricionista clínico. O estudo mapeia as ferramentas digitais usadas no dia a dia, o tempo dedicado a tarefas administrativas e a forma como os profissionais avaliam o seu impacto na prática clínica, na aplicação do Processo de Cuidado Nutricional e na perceção de valor profissional.",
       href: "/resources/research/o-paradigma-digital",
     },
   ];
@@ -42,19 +42,19 @@ export default function StudySection() {
       <div className="flex flex-col md:flex-row justify-between items-start gap-6 md:gap-16 mb-2">
         {/* Left Title */}
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-primary-dark tracking-tight leading-tight md:leading-[1.1]">
-          <span className="italic">104 nutricionistas</span> partilharam<br className="hidden md:block" /> a sua realidade e a sua visão sobre o futuro da profissão.
+          <span className="italic">104 nutricionistas</span> contaram<br className="hidden md:block" /> a sua realidade e como veem<br className="hidden md:block" /> o futuro da profissão.
         </h2>
         
         {/* Description*/}
         <div className="w-full md:w-1/2 flex flex-col items-start gap-6">
           <p className="text-sm md:text-base text-primary-dark/80 leading-relaxed">
-            Profissionais de diferentes contextos: ULS, Clínicas de Saúde, IPSS e Particulares, todos membros ativos da Ordem dos Nutricionistas.
+            Profissionais de diferentes contextos clínicos: ULS, clínicas de saúde, IPSS e prática privada, todos membros efetivos da Ordem dos Nutricionistas.
           </p>
           <Link 
             href="/resources/research/o-paradigma-digital" 
             className="inline-flex items-center justify-center bg-alos-yellow text-alos-brown hover:bg-alos-brown border-alos-brown border hover:text-white transition-colors font-medium rounded-xl px-6 py-2.5 text-xs sm:text-sm"
           >
-            Ver estudo completo
+            Ler o estudo
           </Link>
         </div>
       </div>
@@ -85,11 +85,11 @@ export default function StudySection() {
               }`}
             >
               <div className="w-full md:w-1/4 flex flex-col gap-1">
-                <span className="font-bold text-primary-dark text-xs md:text-sm">{article.category}</span>
-                <span className="text-primary-dark/70 text-xs md:text-sm">{article.date}</span>
+                <span className="font-bold text-primary-dark text-sm">{article.category}</span>
+                <span className="text-primary-dark/70 tracking-tight text-xs">{article.date}</span>
               </div>
               
-              <div className="w-full md:w-3/4 flex flex-col -space-y-2 mt-4">
+              <div className="w-full md:w-3/4 flex flex-col -space-y-4 mt-4 sm:mt-0">
                 <p className="text-sm md:text-[0.95rem] text-primary-dark font-semibold">
                   {article.title}
                 </p>

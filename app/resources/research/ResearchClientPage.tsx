@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React, { useState } from "react";
 import { submitStudyLead } from "@/app/actions/submitLead";
@@ -24,18 +24,21 @@ export default function ResearchClientPage({ study }: { study: ResearchArticle }
 
     const res = await submitStudyLead({
       ...formData,
-      studyName: study.title // Dynamically uses the Markdown title for Notion!
+      studyName: study.title
     });
 
     if (res.success) {
       setIsSuccess(true);
+      
+      if (study.driveLink) {
+        window.open(study.driveLink, "_blank");
+      }
     } else {
       alert("Ocorreu um erro. Por favor, tente novamente.");
     }
     setIsSubmitting(false);
   };
 
-  // Format the date properly for the UI
   const formattedDate = new Date(study.date).toLocaleDateString('pt-PT', {
     day: 'numeric',
     month: 'short',
@@ -58,7 +61,7 @@ export default function ResearchClientPage({ study }: { study: ResearchArticle }
           onClick={() => setIsModalOpen(true)}
           className="inline-flex cursor-pointer items-center justify-center font-medium rounded-lg px-3 py-2 text-sm transition-colors border bg-alos-green-light text-alos-green hover:bg-alos-green border-alos-green hover:text-white"
         >
-          Ler estudo completo
+          Ler o estudo completo
         </button>
       </div>
 
@@ -96,15 +99,29 @@ export default function ResearchClientPage({ study }: { study: ResearchArticle }
                     <Check width="20" height="20" className="text-alos-green" />
                   </div>
                   <span className="font-serif text-3xl mb-4">Obrigado!</span>
-                  <p className="text-gray-500 text-sm leading-relaxed mb-12 px-4">
-                    Recebemos os seus dados. A nossa equipa irá enviar a sua cópia gratuita do estudo por e-mail em breve.
+                  
+                  <p className="text-gray-500 text-sm leading-relaxed mb-8 px-4">
+                    Recebemos os seus dados. Partilhámos consigo <br /> o estudo num novo separador.
                   </p>
-                  <button 
-                    onClick={() => setIsModalOpen(false)}
-                    className="w-full bg-alos-green-light text-alos-green hover:text-white hover:bg-alos-green px-8 py-3.5 rounded-sm font-medium cursor-pointer transition-colors"
-                  >
-                    Voltar para a página do estudo
-                  </button>
+                  
+                  <div className="space-y-3">
+                    {study.driveLink && (
+                      <a 
+                        href={study.driveLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex w-full items-center justify-center text-alos-green bg-alos-green-light hover:text-white hover:bg-alos-green px-8 py-3.5 rounded-sm font-medium transition-colors"
+                      >
+                        Aceder ao PDF manualmente
+                      </a>
+                    )}
+                    <button 
+                      onClick={() => setIsModalOpen(false)}
+                      className="w-full bg-transparent text-primary-dark hover:bg-cream-light border border-primary-dark/50 px-8 py-3.5 rounded-sm font-medium cursor-pointer transition-colors"
+                    >
+                      Voltar para a página
+                    </button>
+                  </div>
                 </div>
               ) : (
                 <div>
@@ -114,11 +131,11 @@ export default function ResearchClientPage({ study }: { study: ResearchArticle }
                     </span>
                   </div>
 
-                  <h2 className="text-3xl font-serif text-center mb-3">
+                  <h2 className="text-3xl font-serif text-center">
                     Obtenha a sua <span className="italic capitalize">cópia</span> do estudo.
                   </h2>
                   <p className="text-sm text-gray-500 text-center mb-10 leading-relaxed px-4">
-                    Preencha os dados abaixo para receber acesso<br></br>ao estudo completo no seu e-mail.
+                    Preencha os dados abaixo para aceder ao estudo  <br />completo instantaneamente.
                   </p>
 
                   <form onSubmit={handleSubmit} className="space-y-5">
@@ -126,21 +143,21 @@ export default function ResearchClientPage({ study }: { study: ResearchArticle }
                     <div className="grid grid-cols-2 gap-4">
                       <div>
                         <label className="block text-xs font-semibold text-gray-700 mb-1.5 ml-1">Primeiro nome</label>
-                        <input required type="text" placeholder="" value={formData.firstName} onChange={(e) => setFormData({...formData, firstName: e.target.value})} className="w-full bg-white hover:bg-cream-light border border-cream rounded-sm px-3 py-1.5 text-sm text-primary-dark placeholder:text-gray-400 focus:outline-none" />
+                        <input required type="text" placeholder="" value={formData.firstName} onChange={(e) => setFormData({...formData, firstName: e.target.value})} className="w-full bg-white hover:bg-cream-light border-2 border-cream rounded-sm px-3 py-1.5 text-sm text-primary-dark placeholder:text-gray-400 focus:outline-none" />
                       </div>
                       <div>
                         <label className="block text-xs font-semibold text-gray-700 mb-1.5 ml-1">Apelido</label>
-                        <input required type="text" placeholder="" value={formData.lastName} onChange={(e) => setFormData({...formData, lastName: e.target.value})} className="w-full bg-white hover:bg-cream-light border border-cream rounded-sm px-3 py-1.5 text-sm text-primary-dark placeholder:text-gray-400 focus:outline-none" />
+                        <input required type="text" placeholder="" value={formData.lastName} onChange={(e) => setFormData({...formData, lastName: e.target.value})} className="w-full bg-white hover:bg-cream-light border-2 border-cream rounded-sm px-3 py-1.5 text-sm text-primary-dark placeholder:text-gray-400 focus:outline-none" />
                       </div>
                     </div>
 
                     <div>
                       <label className="block text-xs font-semibold text-gray-700 mb-1.5 ml-1">E-mail</label>
-                      <input required type="email" placeholder="" value={formData.email} onChange={(e) => setFormData({...formData, email: e.target.value})} className="w-full bg-white hover:bg-cream-light border border-cream rounded-sm px-3 py-1.5 text-sm text-primary-dark placeholder:text-gray-400 focus:outline-none" />
+                      <input required type="email" placeholder="" value={formData.email} onChange={(e) => setFormData({...formData, email: e.target.value})} className="w-full bg-white hover:bg-cream-light border-2 border-cream rounded-sm px-3 py-1.5 text-sm text-primary-dark placeholder:text-gray-400 focus:outline-none" />
                     </div>
 
                     <button type="submit" disabled={isSubmitting} className="w-full bg-alos-green-light text-alos-green font-medium py-3.5 cursor-pointer rounded-sm mt-4 hover:bg-alos-green hover:text-white transition-colors disabled:opacity-50">
-                      {isSubmitting ? "A enviar..." : "Solicitar Estudo"}
+                      {isSubmitting ? "A enviar..." : "Aceder ao Estudo"}
                     </button>
                     
                     <p className="text-center text-xs text-gray-400 mt-4">

@@ -12,19 +12,19 @@ export default function ClinicalSpecialtiesTabs() {
     {
       id: 0,
       tabName: "Doença Metabólica",
-      title: "Nutrição na Doença Metabólica",
+      title: "Visualize o impacto da sua intervenção num gráfico",
       description:
-        "A Alos gera gráficos de evolução longitudinal, podendo cruzar instantaneamente o aporte diário de fibra com a melhoria da Hemoglobina Glicada (HbA1c), visualizando o impacto clínico da sua intervenção ao longo dos meses.",
-      imageSrc: "/",
+        "Acompanhe lado a lado a ingestão diária de fibra e a hemoglobina glicada (HbA1c), e veja como o doente responde à sua intervenção ao longo dos meses.",
+      imageSrc: "/bg-low-fidelity/metabolica.svg",
       activeColor: "bg-alos-blue-light border-alos-blue text-alos-blue",
     },
     {
       id: 1,
       tabName: "Oncologia",
-      title: "Nutrição em Oncologia",
+      title: "Do questionário SARC-F ao diagnóstico de sarcopenia",
       description:
-        "Desde o SARC-F à classificação do perímetro geminal, da força de preensão da mão e bioimpedância: centralizamos todas as métricas para o diagnóstico da sarcopenia. A Alos pré-preenche ferramentas complexas como o questionário PG-SGA.",
-      imageSrc: "/",
+        "Reúna no mesmo ecrã o SARC-F, o perímetro geminal, a força de preensão da mão e a bioimpedância, e chegue ao diagnóstico de sarcopenia com todos os dados à frente.",
+      imageSrc: "/bg-low-fidelity/oncologia.svg",
       activeColor: "bg-alos-yellow border-alos-brown text-alos-brown",
     },
     {
@@ -95,12 +95,12 @@ export default function ClinicalSpecialtiesTabs() {
       {/* CARD */}
       <div className="w-full bg-cream rounded-[1.5rem] p-6 md:p-12 flex flex-col md:flex-row gap-10 md:gap-16 items-center md:items-start">
         
-        <div className="w-full md:w-1/2 flex flex-col items-start pt-2 space-y-2">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif text-primary-dark tracking-tight leading-tight md:leading-[1.1]">
+        <div className="w-full md:w-1/2 flex flex-col items-start pt-2 space-y-4">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl md:w-3/4 font-serif text-primary-dark tracking-tight leading-tight md:leading-[1.1]">
             {tabs[activeTab].title}
           </h2>
           
-          <p className="text-xs md:text-sm text-primary-dark leading-relaxed mb-6">
+          <p className="text-xs md:text-sm md:w-3/4 text-primary-dark leading-[1.3] mb-6">
             {tabs[activeTab].description}
           </p>
 
@@ -121,7 +121,7 @@ export default function ClinicalSpecialtiesTabs() {
                 src={tabs[activeTab].imageSrc}
                 alt={`Interface demonstrativa de ${tabs[activeTab].title}`}
                 fill
-                className="object-cover object-left-top"
+                className="object-cover"
                 priority
               />
             ) : (

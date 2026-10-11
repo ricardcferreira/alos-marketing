@@ -18,10 +18,10 @@ export default function StickyFeatureStack() {
   const features = [
     {
       id: 1,
-      tag: "Avaliação do Estado Nutricional",
+      tag: "Avaliação Nutricional",
       title: "Mais tempo clínico em cada consulta.",
       description:
-        "Do questionário de avaliação nutricional aos critérios GLIM, tudo numa só vista: composição corporal, sinais e sintomas, ingestão alimentar e marcadores biológicos. Menos trabalho administrativo, mais profundidade clínica.",
+        "Composição corporal, sinais e sintomas, ingestão alimentar e marcadores biológicos, já classificados, do questionário de avaliação aos critérios GLIM. O quadro completo, sem andar de ficheiro em ficheiro.",
       bgColor: "bg-alos-green-light", 
       tagBorderColor: "border-alos-green", 
       tagTextColor: "text-alos-green", 
@@ -32,10 +32,10 @@ export default function StickyFeatureStack() {
     },
     {
       id: 2,
-      tag: "Diagnóstico e Intervenção Nutricional",
+      tag: "Diagnóstico e Intervenção",
       title: "Fecho do ciclo entre deteção e resolução.",
       description:
-        "A Alos sugere termos do Catálogo Português de Nutrição e compõe a frase PES (Problema, Etiologia, Sintomas) a partir das avaliações que já registou. Reveja, ajuste e valide em segundos.",
+        "A partir das avaliações que já registou, a Alos sugere termos do Catálogo Português de Nutrição e compõe a frase PES (Problema, Etiologia, Sinais e Sintomas). Reveja, ajuste e valide em segundos.",
       bgColor: "bg-alos-yellow", 
       tagBorderColor: "border-alos-brown",
       tagTextColor: "text-alos-brown",
@@ -49,7 +49,7 @@ export default function StickyFeatureStack() {
       tag: "Monitorização e Avaliação",
       title: "Impacto no progresso clínico e nutricional.",
       description:
-        "Escolhe as principais métricas que mostram a evolução do doente em tempo real num painel e compare com a última consulta.",
+        "Escolha, entre mais de 100 parâmetros clínicos, as medidas que contam para este doente e acompanhe-as juntas num painel visual, comparadas com a última consulta.",
       bgColor: "bg-alos-blue-light", 
       tagBorderColor: "border-alos-blue", 
       tagTextColor: "text-alos-blue", 
@@ -69,7 +69,7 @@ export default function StickyFeatureStack() {
           Do primeiro registo ao<br></br>resultado clínico.
         </h2>
         <p className="text-xs md:text-sm md:leading-[1.4] text-primary-dark max-w-[80%] md:max-w-[70%] md:max-w-2xl mx-auto">
-          Avaliação, diagnóstico e monitorização ligados num só fluxo: o que regista numa fase alimenta a seguinte, sem repetir dados.
+          Avaliação, diagnóstico, intervenção e monitorização ligados num só fluxo: o que regista numa fase alimenta a seguinte, sem repetir dados.
         </p>
       </div>
 

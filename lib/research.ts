@@ -13,6 +13,7 @@ const RESEARCH_DIR = path.join(process.cwd(), "content/research");
 export interface ResearchMeta {
   slug: string;
   title: string;
+  driveLink: string;
   type: string;
   date: string;
   leadWallTitle: string;
@@ -38,6 +39,7 @@ export function getAllResearchMeta(): ResearchMeta[] {
       return {
         slug: file.replace(/\.md$/, ""),
         title: data.title as string,
+        driveLink: data.driveLink as string,
         type: data.type as string,
         date: data.date as string,
         leadWallTitle: data.leadWallTitle as string,
@@ -68,10 +70,13 @@ export async function getResearchArticle(slug: string): Promise<ResearchArticle 
   return {
     slug,
     title: data.title as string,
+    driveLink: data.driveLink as string,
     type: data.type as string,
     date: data.date as string,
     leadWallTitle: data.leadWallTitle as string,
     description: data.description as string | undefined,
+    readTime: data.readTime as string | undefined, 
+    image: data.image as string | undefined,   
     html: processed.toString(),
   };
 }

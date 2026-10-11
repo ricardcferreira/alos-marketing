@@ -4,6 +4,7 @@ import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import CalButton from "@/components/ui/CalButton";
+import Link from "next/link";
 
 export default function ScrollRevealSection() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -61,21 +62,27 @@ export default function ScrollRevealSection() {
           className="relative z-10 flex flex-col items-center text-center space-y-2 max-w-4xl px-4 md:px-0"
         >
           <h2 className="text-3xl md:text-4xl lg:text-6xl max-w-[85%] font-serif text-primary-dark tracking-tight leading-tight md:leading-[1.1]">
-            <span className="italic">Lorem ipsum.</span> <br />
-            Ut enim ad minim
-            <br />
-            consectetur adipiscing elit
+            <span className="italic">Ouvimos os nutricionistas. </span>
+            Agora, continuamos a<br /> construir ao seu lado.
           </h2>
-          <p className="text-xs md:text-sm md:leading-[1.4] mb-6 text-primary-dark max-w-[80%] md:max-w-2xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          <p className="text-sm md:text-lg md:leading-[1.4] mb-6 text-primary-dark max-w-[80%] md:max-w-2xl">
+            O Estudo-Piloto é o passo seguinte: perceber como a Alos poderá integrar no seu dia a dia clínico, para dedicar mais tempo ao que importa, o doente.
           </p>
 
-          <CalButton
-            calLink="https://cal.com/aloshealth/conversa-inicial"
-            variant="primary"
-          >
-            Conversa Inicial
-          </CalButton>
+          <div className="flex gap-3">
+            <CalButton
+              calLink="https://cal.com/aloshealth/conversa-inicial"
+              variant="primary"
+            >
+              Conversa Inicial
+            </CalButton>
+            <Link 
+              href="/resources/research/o-paradigma-digital" 
+              className="inline-flex items-center justify-center bg-transparent text-primary-dark hover:bg-cream border-primary-dark/50 border transition-colors font-medium rounded-xl px-6 py-2.5 text-xs sm:text-sm"
+            >
+              Ler o estudo
+            </Link>
+          </div>
         </motion.div>
 
         {/* --- LEFT HALF OF THE LOGO --- */}

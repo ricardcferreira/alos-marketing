@@ -67,7 +67,7 @@ export default function ResearchIndexPage() {
                       href={`/resources/research/${study.slug}`} 
                       className="inline-flex cursor-pointer items-center justify-center w-fit font-medium rounded-lg px-3 py-2 text-sm transition-colors border bg-alos-green-light text-alos-green hover:bg-alos-green border-alos-green hover:text-white"
                     >
-                      Ler Estudo Completo
+                      Ler o estudo completo
                     </Link>
                   </div>
 

@@ -34,7 +34,7 @@ export default function NavBar() {
           
           <Link 
             href="https://app.aloshealth.com" 
-            className="inline-flex items-center justify-center font-medium rounded-full md:rounded-lg border border-primary-dark text-primary-dark hover:bg-cream-light transition-colors px-4 py-1.5 md:py-2 text-xs md:text-sm"
+            className="inline-flex items-center justify-center font-medium rounded-full md:rounded-xl border border-primary-dark/50 text-primary-dark hover:bg-cream-light transition-colors px-4 py-1.5 md:py-2 text-xs md:text-sm"
           >
             Login
           </Link>

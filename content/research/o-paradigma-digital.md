@@ -1,11 +1,9 @@
 ---
-title: "O Ecossistema Digital na Nutrição Clínica"
+title: "Um novo espaço de decisão nutricional"
 type: "Inquérito"
-date: "2025-11-26"
-leadWallTitle: "O custo da fragmentação digital na área da nutrição clínica."
-description: "We introduce a multinational study assessing administrative burden..."
-readTime: "8 min de leitura"
-image: ""
+date: "Jul 23, 2026"
+leadWallTitle: "A ausência de uma infraestrutura digital construída especificamente para o nutricionista clínico."
+driveLink: "https://drive.google.com/file/d/1hOO7Vu1zXLG9k-qEGIDAqOBFVUTrUk0L/view?usp=sharing"
 ---
 
 <p>

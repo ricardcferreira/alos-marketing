@@ -27,10 +27,8 @@ export default function HeroSection() {
           decisão nutricional
         </h1>
         
-        <span className="text-sm md:text-lg text-white mb-4 max-w-[70%] md:max-w-sm lg:max-w-md">
-          Transforme o seu raciocínio clínico em dados estruturados e codificados. 
-          Sem trabalho repetitivo.
-          Desenhado para dar ao nutricionista o valor que merece.
+        <span className="text-sm md:text-lg text-white leading-[1.4] md:leading-[1.3] mb-4 max-w-[70%] md:max-w-sm lg:max-w-md">
+          O seu raciocínio clínico, registado uma só vez e pronto a usar em cada consulta. Menos trabalho administrativo, mais tempo com o doente.
         </span>
 
         <CalButton 
