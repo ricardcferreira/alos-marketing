@@ -64,11 +64,11 @@ export default function StickyFeatureStack() {
     <section ref={containerRef} className="w-full max-w-7xl mx-auto space-y-10 flex flex-col items-center px-4 md:px-4 lg:px-0">
       
       {/* SECTION HEADER */}
-      <div className="text-center max-w-3xl flex flex-col items-center">
+      <div className="text-center max-w-3xl space-y-0 flex flex-col items-center">
         <h2 className="text-2xl md:text-3xl lg:text-4xl max-w-[70%] font-serif text-primary-dark tracking-tight leading-tight md:leading-[1.1]">
           Do primeiro registo ao<br></br>resultado clínico.
         </h2>
-        <p className="text-xs md:text-sm md:leading-[1.4] text-primary-dark max-w-[80%] md:max-w-[70%] md:max-w-2xl mx-auto">
+        <p className="text-xs md:text-sm md:leading-[1.4] mb-6 text-primary-dark max-w-[80%] md:max-w-[70%] md:max-w-2xl mx-auto">
           Avaliação, diagnóstico, intervenção e monitorização ligados num só fluxo: o que regista numa fase alimenta a seguinte, sem repetir dados.
         </p>
       </div>

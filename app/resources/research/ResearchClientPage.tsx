@@ -50,11 +50,11 @@ export default function ResearchClientPage({ study }: { study: ResearchArticle }
       <NavBar />
       
       {/* Article Header (Dynamic) */}
-      <div className="mx-auto max-w-3xl space-y-4 mb-4 text-center">
+      <div className="mx-auto max-w-3xl px-8 space-y-4 mb-4 text-center">
         <span className="text-xs inline-block">
           {study.type} · {formattedDate}
         </span>
-        <h1 className="text-4xl font-serif font-medium leading-tight">
+        <h1 className="sm:text-4xl font-serif font-medium leading-tight">
           {study.title}
         </h1>
         <button 
@@ -85,7 +85,7 @@ export default function ResearchClientPage({ study }: { study: ResearchArticle }
           </button>
 
           <div className="w-full md:w-1/2 min-h-[40vh] md:h-full bg-gradient-to-tl from-white via-alos-green-light to-alos-green flex flex-col justify-center items-center p-10 md:p-16 lg:p-20 relative">
-            <span className="text-5xl font-serif text-white text-center max-w-sm tracking-tight leading-tighter">
+            <span className="text-4xl sm:text-5xl font-serif text-white text-center max-w-sm tracking-tight leading-tighter">
               {study.leadWallTitle}
             </span>
           </div>
@@ -135,7 +135,7 @@ export default function ResearchClientPage({ study }: { study: ResearchArticle }
                     Obtenha a sua <span className="italic capitalize">cópia</span> do estudo.
                   </h2>
                   <p className="text-sm text-gray-500 text-center mb-10 leading-relaxed px-4">
-                    Preencha os dados abaixo para aceder ao estudo  <br />completo instantaneamente.
+                    Preencha os dados abaixo para aceder ao estudo completo instantaneamente.
                   </p>
 
                   <form onSubmit={handleSubmit} className="space-y-5">

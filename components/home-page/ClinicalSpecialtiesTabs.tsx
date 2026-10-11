@@ -20,28 +20,28 @@ export default function ClinicalSpecialtiesTabs() {
     },
     {
       id: 1,
-      tabName: "Oncologia",
-      title: "Do questionário SARC-F ao diagnóstico de sarcopenia",
+      tabName: "Internamento",
+      title: "No internamento, o doente muda de dia para dia",
       description:
-        "Reúna no mesmo ecrã o SARC-F, o perímetro geminal, a força de preensão da mão e a bioimpedância, e chegue ao diagnóstico de sarcopenia com todos os dados à frente.",
+        "Ao registar o doente na admissão, a Alos propõe a ferramenta de rastreio adequada e responde às perguntas com o que já foi registado. Valide cada resposta e veja a pontuação.",
+      imageSrc: "/bg-low-fidelity/internamento.svg",
+      activeColor: "bg-alos-green-light border-alos-green text-alos-green",
+    },
+    {
+      id: 2,
+      tabName: "Oncologia",
+      title: "Do rastreio ao diagnóstico de sarcopenia em segundos",
+      description:
+        "Reúna no mesmo ecrã o rastreio SARC-F, a força de preensão da mão, o perímetro geminal e a bioimpedância, e veja a frase PES partir deles: com cada medida ao lado do termo.",
       imageSrc: "/bg-low-fidelity/oncologia.svg",
       activeColor: "bg-alos-yellow border-alos-brown text-alos-brown",
     },
     {
-      id: 2,
-      tabName: "Internamento",
-      title: "Nutrição em Internamento",
-      description:
-        "Centralize a informação para evitar perdas de dados e reduzir o erro clínico. O sistema autoseleciona a ferramenta de rastreio, como o NRS 2002, e sistematiza o seu raciocínio gerando declarações de diagnóstico nutricional em formato PES.",
-      imageSrc: "/",
-      activeColor: "bg-alos-green-light border-alos-green text-alos-green",
-    },
-    {
       id: 3,
       tabName: "Pediatria",
-      title: "Nutrição em Pediatria",
+      title: "Acompanhe a trajetória de crescimento",
       description:
-        "Analise a demografia do doente e autoseleciona a curva de crescimento ideal, utilizando referências da OMS ou dos Centers for Disease Control. A Alos acompanha a trajetória dos percentis e as curvas de todos os parâmetros de crescimento.",
+        "A Alos propõe a curva de referência adequada à idade e ao sexo da criança (OMS ou CDC) e coloca cada medição no gráfico, para ver o percentil e a trajetória.",
       imageSrc: "/",
       activeColor: "bg-alos-yellow border-alos-brown text-alos-brown",
     },
@@ -121,7 +121,7 @@ export default function ClinicalSpecialtiesTabs() {
                 src={tabs[activeTab].imageSrc}
                 alt={`Interface demonstrativa de ${tabs[activeTab].title}`}
                 fill
-                className="object-cover"
+                className="object-cover w-full h-full"
                 priority
               />
             ) : (
