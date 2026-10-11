@@ -39,10 +39,10 @@ export default function HeroVideoSection() {
             </div>
 
             <Image 
-                src="/landscape/founder-banner-angled.png" 
+                src="/landscape/founder-banner-angled-smile.png" 
                 alt="Alos Health Professional using platform"
                 fill
-                className="object-cover object-right"
+                className="object-cover"
             />
       
             {/* Subtle Gradient Overlay */}
