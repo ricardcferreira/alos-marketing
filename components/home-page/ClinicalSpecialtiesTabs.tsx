@@ -10,43 +10,43 @@ export default function ClinicalSpecialtiesTabs() {
 
   const tabs = [
     {
-      id: 0,
+      id: 1,
       tabName: "Doença Metabólica",
-      title: "Visualize o impacto da sua intervenção num gráfico",
+      title: "Visualize o impacto da sua intervenção",
       description:
-        "Acompanhe lado a lado a ingestão diária de fibra e a hemoglobina glicada (HbA1c), e veja como o doente responde à sua intervenção ao longo dos meses.",
+        "Acompanhe lado a lado a ingestão diária de fibra e e os valores de hemoglobina glicada (HbA1c), e compreenda a evolução do estado nutricional do doente ao longo dos meses.",
       imageSrc: "/bg-low-fidelity/metabolica.svg",
       activeColor: "bg-alos-blue-light border-alos-blue text-alos-blue",
     },
     {
-      id: 1,
+      id: 2,
+      tabName: "Oncologia",
+      title: "Vá mais longe na avaliação do doente oncológico",
+      description:
+        "Reúna na mesma interface o rastreio SARC-F e os valores da força de preensão da mão, do perímetro geminal e da bioimpedância, para construir a frase PES em segundos.",
+      imageSrc: "/bg-low-fidelity/oncologia.svg",
+      activeColor: "bg-alos-yellow border-alos-brown text-alos-brown",
+    },
+    {
+      id: 3,
       tabName: "Internamento",
-      title: "No internamento, o doente muda de dia para dia",
+      title: "Não perca informação nas alas do internamento",
       description:
         "Ao registar o doente na admissão, a Alos propõe a ferramenta de rastreio adequada e responde às perguntas com o que já foi registado. Valide cada resposta e veja a pontuação.",
       imageSrc: "/bg-low-fidelity/internamento.svg",
       activeColor: "bg-alos-green-light border-alos-green text-alos-green",
     },
     {
-      id: 2,
-      tabName: "Oncologia",
-      title: "Do rastreio ao diagnóstico de sarcopenia em segundos",
-      description:
-        "Reúna no mesmo ecrã o rastreio SARC-F, a força de preensão da mão, o perímetro geminal e a bioimpedância, e veja a frase PES partir deles: com cada medida ao lado do termo.",
-      imageSrc: "/bg-low-fidelity/oncologia.svg",
-      activeColor: "bg-alos-yellow border-alos-brown text-alos-brown",
-    },
-    {
-      id: 3,
+      id: 4,
       tabName: "Pediatria",
       title: "Acompanhe a trajetória de crescimento",
       description:
         "A Alos propõe a curva de referência adequada à idade e ao sexo da criança (OMS ou CDC) e coloca cada medição no gráfico, para ver o percentil e a trajetória.",
-      imageSrc: "/",
+      imageSrc: "/bg-low-fidelity/pediatria.svg",
       activeColor: "bg-alos-yellow border-alos-brown text-alos-brown",
     },
     {
-      id: 4,
+      id: 5,
       tabName: "Doença Renal",
       title: "Nutrição na Doença Renal",
       description:
@@ -55,7 +55,7 @@ export default function ClinicalSpecialtiesTabs() {
       activeColor: "bg-alos-blue-light border-alos-blue text-alos-blue",
     },
     {
-      id: 5,
+      id: 6,
       tabName: "Desporto",
       title: "Nutrição no Desporto",
       description:
@@ -68,9 +68,8 @@ export default function ClinicalSpecialtiesTabs() {
   return (
     <section className="w-full max-w-7xl mx-auto flex flex-col items-center px-4 md:px-4 lg:px-0">
       
-      {/* TABS */}
       <div className="w-full mb-6">
-        <div className="flex overflow-x-auto scrollbar-hide gap-2 justify-between md:gap-3 p-2 md:p-4 bg-cream rounded-full w-full">
+        <div className="flex flex-wrap sm:flex-wrap lg:flex-nowrap justify-center md:justify-between gap-2 md:gap-3 p-3 md:p-4 bg-cream rounded-[1.5rem] sm:rounded-[1.5rem] lg:rounded-full w-full">
           {tabs.map((tab, index) => {
             const isActive = activeTab === index;
             return (
@@ -78,8 +77,7 @@ export default function ClinicalSpecialtiesTabs() {
                 key={tab.id}
                 onClick={() => setActiveTab(index)}
                 className={cn(
-                  /* Removida a classe w-full para as pílulas se adaptarem ao próprio texto */
-                  "whitespace-nowrap px-4 py-2 md:px-6 md:py-2.5 cursor-pointer w-full rounded-full text-xs md:text-sm font-medium transition-colors border",
+                  "whitespace-nowrap flex-grow text-center px-4 py-2 md:px-6 md:py-2.5 cursor-pointer rounded-full text-xs md:text-sm font-medium transition-colors border",
                   isActive
                     ? tab.activeColor 
                     : "bg-cream border-[#C0B6AD] text-[#C0B6AD] hover:bg-cream-light" 
@@ -96,7 +94,7 @@ export default function ClinicalSpecialtiesTabs() {
       <div className="w-full bg-cream rounded-[1.5rem] p-6 md:p-12 flex flex-col md:flex-row gap-10 md:gap-16 items-center md:items-start">
         
         <div className="w-full md:w-1/2 flex flex-col items-start pt-2 space-y-4">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl md:w-3/4 font-serif text-primary-dark tracking-tight leading-tight md:leading-[1.1]">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl w-[80%] md:w-3/4 font-serif text-primary-dark tracking-tight leading-tight md:leading-[1.1]">
             {tabs[activeTab].title}
           </h2>
           

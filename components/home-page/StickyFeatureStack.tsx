@@ -7,10 +7,9 @@ export default function StickyFeatureStack() {
   const [isMobile, setIsMobile] = useState(true);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Detetamos se é mobile para desativar o sticky math de forma reativa
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
-    handleResize(); // Executa ao montar
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -27,7 +26,7 @@ export default function StickyFeatureStack() {
       tagTextColor: "text-alos-green", 
       textColor: "text-primary-dark",
       imageSrc: "/low-fidelity/avaliacao.svg", 
-      imageScale: 0.9,
+      imageScale: 1.2,
       imageOffset: { x: 0, y: 0 },
     },
     {
@@ -41,7 +40,7 @@ export default function StickyFeatureStack() {
       tagTextColor: "text-alos-brown",
       textColor: "text-primary-dark", 
       imageSrc: "/low-fidelity/diagnostico.svg",
-      imageScale: 0.9,
+      imageScale: 1.2,
       imageOffset: { x: 0, y: 0 },
     },
     {
@@ -49,13 +48,13 @@ export default function StickyFeatureStack() {
       tag: "Monitorização e Avaliação",
       title: "Impacto no progresso clínico e nutricional.",
       description:
-        "Escolha, entre mais de 100 parâmetros clínicos, as medidas que contam para este doente e acompanhe-as juntas num painel visual, comparadas com a última consulta.",
+        "Escolha, entre mais de 100 parâmetros clínicos, as medidas que contam para este doente e acompanhe-as juntas num painel visual, num determinado período.",
       bgColor: "bg-alos-blue-light", 
       tagBorderColor: "border-alos-blue", 
       tagTextColor: "text-alos-blue", 
       textColor: "text-primary-dark",
       imageSrc: "/low-fidelity/monitorizacao.svg",
-      imageScale: 0.9,
+      imageScale: 1.2,
     imageOffset: { x: 0, y: 0 },
     },
   ];
@@ -73,7 +72,7 @@ export default function StickyFeatureStack() {
         </p>
       </div>
 
-      <div className="w-full flex flex-col relative">
+      <div className="w-full flex flex-col gap-4 relative">
         {features.map((feature, index) => (
           <div
             key={feature.id}
@@ -81,8 +80,8 @@ export default function StickyFeatureStack() {
             style={
               !isMobile
                 ? {
-                    top: `calc(120px + ${index * 220}px)`, 
-                    marginBottom: `${(features.length - 1 - index) * 220}px`
+                    top: `calc(120px + ${index * 30}px)`, 
+                    marginBottom: `${(features.length - 1 - index) * 30}px`
                   }
                 : {}
             }

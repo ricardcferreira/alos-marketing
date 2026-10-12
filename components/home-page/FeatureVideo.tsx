@@ -34,15 +34,15 @@ export default function HeroVideoSection() {
       <div className="relative w-full aspect-[4/3] md:aspect-[16/9] bg-cream rounded-[1.5rem] overflow-hidden">
               
             {/* Label inside the video */}
-            <div className="bg-gradient-to-t w-full h-full text-center from-transparent via-primary-dark/5 to-primary-dark/15 absolute top-0 pt-3 sm:pt-6 left-1/2 -translate-x-1/2 z-20 pointer-events-none">
+            <div className="bg-gradient-to-t w-full h-full text-center from-transparent via-primary-dark/5 to-primary-dark/15 absolute top-0 pt-2 sm:pt-4 left-1/2 -translate-x-1/2 z-20 pointer-events-none">
               <p className="text-white text-xs md:text-sm font-medium">Veja como funciona</p>
             </div>
 
             <Image 
-                src="/landscape/founder-banner-angled-smile.png" 
+                src="/landscape/video-banner.png" 
                 alt="Alos Health Professional using platform"
                 fill
-                className="object-cover"
+                className="object-cover object-center"
             />
       
             {/* Subtle Gradient Overlay */}
