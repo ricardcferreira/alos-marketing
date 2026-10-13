@@ -5,7 +5,7 @@ export default function TeamSection() {
     <section className="w-full bg-alos-blue-light py-16 md:py-24 px-4 md:px-8">
       
       {/* HEADER SECTION */}
-      <div className="w-full max-w-7xl mx-auto flex flex-col">
+      <div className="w-full max-w-6xl mx-auto flex flex-col">
         <div className="mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-primary-dark tracking-tight leading-tight md:leading-snug">
             Fundada por <span className="italic">Francisco Ribeiro</span> e <span className="italic">Ricardo Ferreira,</span> a Alos combina um profundo conhecimento clínico com a inovação digital estratégica no setor da saúde moderna.
@@ -30,7 +30,7 @@ export default function TeamSection() {
               Francisco Ribeiro
             </p>
             <p className="text-sm md:text-[0.95rem] text-primary-dark">
-              O Francisco é um nutricionista certificado com experiência prática em hospitais, clínicas multidisciplinares e instituições desportivas. Orientado pela prática baseada em evidências, garante que a Alos Health assenta em fundamentos científicos rigorosos e se adapta na perfeição às necessidades reais e quotidianas dos profissionais de saúde.
+              O Francisco é um nutricionista registado com experiência prática em hospitais, clínicas multidisciplinares e instituições desportivas. Orientado pela prática baseada em evidências, garante que a Alos Health assenta em fundamentos científicos rigorosos e se adapta na perfeição às necessidades reais e quotidianas dos profissionais de saúde.
             </p>
           </div>
         </div>
@@ -50,7 +50,7 @@ export default function TeamSection() {
               Ricardo Ferreira
             </p>
             <p className="text-sm md:text-[0.95rem] text-primary-dark">
-              Ricardo traz uma abordagem orientada a resultados à estratégia digital no setor da HealthTech. A sua função concentra-se em traduzir o complexo valor tecnológico e clínico da Alos Health em soluções escaláveis que realmente tenham ressonância no mercado moderno dos cuidados de saúde.
+              O Ricardo traz uma abordagem orientada a resultados à estratégia digital no setor da HealthTech. A sua função concentra-se em traduzir o complexo valor tecnológico e clínico da Alos Health em soluções escaláveis que realmente tenham ressonância no mercado moderno dos cuidados de saúde.
             </p>
           </div>
         </div>

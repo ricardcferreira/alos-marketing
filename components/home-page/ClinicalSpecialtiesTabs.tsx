@@ -10,34 +10,34 @@ export default function ClinicalSpecialtiesTabs() {
 
   const tabs = [
     {
-      id: 1,
+      id: 0,
       tabName: "Doença Metabólica",
       title: "Visualize o impacto da sua intervenção",
       description:
-        "Acompanhe lado a lado a ingestão diária de fibra e e os valores de hemoglobina glicada (HbA1c), e compreenda a evolução do estado nutricional do doente ao longo dos meses.",
+        "Acompanhe lado a lado a ingestão diária de fibra e e os valores de hemoglobina glicada (HbA1c), e compreenda a evolução do estado nutricional do doente ao longo do tempo.",
       imageSrc: "/bg-low-fidelity/metabolica.svg",
       activeColor: "bg-alos-blue-light border-alos-blue text-alos-blue",
     },
     {
-      id: 2,
+      id: 1,
       tabName: "Oncologia",
       title: "Vá mais longe na avaliação do doente oncológico",
       description:
-        "Reúna na mesma interface o rastreio SARC-F e os valores da força de preensão da mão, do perímetro geminal e da bioimpedância, para construir a frase PES em segundos.",
+        "Reúna na mesma interface o rastreio SARC-F e os valores da força de preensão da mão, do perímetro geminal e da bioimpedância, para construir a frase PES em segundos: centralizamos todas as métricas para o diagnóstico da sarcopenia.",
       imageSrc: "/bg-low-fidelity/oncologia.svg",
       activeColor: "bg-alos-yellow border-alos-brown text-alos-brown",
     },
     {
-      id: 3,
+      id: 2,
       tabName: "Internamento",
       title: "Não perca informação nas alas do internamento",
       description:
-        "Ao registar o doente na admissão, a Alos propõe a ferramenta de rastreio adequada e responde às perguntas com o que já foi registado. Valide cada resposta e veja a pontuação.",
+        "De acordo com o perfil do doente a Alos propõe a ferramenta de rastreio adequada e responde às perguntas com o que já foi registado. Valide cada resposta e veja a pontuação.",
       imageSrc: "/bg-low-fidelity/internamento.svg",
       activeColor: "bg-alos-green-light border-alos-green text-alos-green",
     },
     {
-      id: 4,
+      id: 3,
       tabName: "Pediatria",
       title: "Acompanhe a trajetória de crescimento",
       description:
@@ -46,27 +46,27 @@ export default function ClinicalSpecialtiesTabs() {
       activeColor: "bg-alos-yellow border-alos-brown text-alos-brown",
     },
     {
-      id: 5,
+      id: 4,
       tabName: "Doença Renal",
-      title: "Nutrição na Doença Renal",
+      title: "Calcule com o peso certo, mesmo com edema.",
       description:
-        "Na doença renal, o edema compromete qualquer estimativa. A Alos permite aplicar instantaneamente o peso corrigido do doente para cálculos de energia e proteína. Controle a ingestão de sódio, potássio e fósforo com o máximo rigor clínico.",
-      imageSrc: "/",
+        "Na doença renal, o edema infla o peso na balança e distorce os cálculos. A Alos permite aplicar instantaneamente o peso corrigido do doente para efetuar os cálculos nutricionais com o máximo rigor clínico.",
+      imageSrc: "/bg-low-fidelity/renal.svg",
       activeColor: "bg-alos-blue-light border-alos-blue text-alos-blue",
     },
     {
-      id: 6,
+      id: 5,
       tabName: "Desporto",
-      title: "Nutrição no Desporto",
+      title: "O desporto exige precisão ao milímetro",
       description:
-        "A Alos integra a rigorosa metodologia ISAK para processar a antropometria do atleta. Também permite monitorizar a ingestão alimentar, quantificando ao detalhe os macronutrientes do pré ao pós-treino.",
+        "Seja no alto rendimento ou no desporto amador, a Alos integra a rigorosa metodologia ISAK para processar a antropometria avançada do atleta.",
       imageSrc: "/",
       activeColor: "bg-alos-green-light border-alos-green text-alos-green",
     }
   ];
 
   return (
-    <section className="w-full max-w-7xl mx-auto flex flex-col items-center px-4 md:px-4 lg:px-0">
+    <section className="w-full max-w-6xl mx-auto flex flex-col items-center px-4 md:px-4 lg:px-0">
       
       <div className="w-full mb-6">
         <div className="flex flex-wrap sm:flex-wrap lg:flex-nowrap justify-center md:justify-between gap-2 md:gap-3 p-3 md:p-4 bg-cream rounded-[1.5rem] sm:rounded-[1.5rem] lg:rounded-full w-full">

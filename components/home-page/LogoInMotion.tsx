@@ -66,7 +66,7 @@ export default function ScrollRevealSection() {
             Agora, continuamos a construir ao seu lado.
           </h2>
           <p className="text-xs md:text-lg md:leading-[1.4] mb-6 text-primary-dark max-w-[80%] sm:max-w-[40%] lg:max-w-[80%] md:max-w-2xl">
-            O Estudo-Piloto é o passo seguinte: perceber como a Alos poderá integrar no seu dia a dia clínico, para dedicar mais tempo ao que importa, o doente.
+            O Estudo-Piloto é o passo seguinte: perceber como a Alos poderá integrar o seu dia a dia clínico, para dedicar mais tempo ao que importa, o doente.
           </p>
 
           <div className="flex gap-3">

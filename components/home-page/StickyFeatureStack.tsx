@@ -17,10 +17,10 @@ export default function StickyFeatureStack() {
   const features = [
     {
       id: 1,
-      tag: "Avaliação Nutricional",
-      title: "Mais tempo clínico em cada consulta.",
+      tag: "Avaliação do Estado Nutricional",
+      title: "Mais profundidade, menos cliques.",
       description:
-        "Composição corporal, sinais e sintomas, ingestão alimentar e marcadores biológicos, já classificados, do questionário de avaliação aos critérios GLIM. O quadro completo, sem andar de ficheiro em ficheiro.",
+        "Sinais e sintomas, composição corporal, ingestão alimentar e marcadores biológicos, já classificados, do questionário de avaliação aos critérios GLIM. O quadro completo, sem andar de ficheiro em ficheiro.",
       bgColor: "bg-alos-green-light", 
       tagBorderColor: "border-alos-green", 
       tagTextColor: "text-alos-green", 
@@ -31,10 +31,10 @@ export default function StickyFeatureStack() {
     },
     {
       id: 2,
-      tag: "Diagnóstico e Intervenção",
-      title: "Fecho do ciclo entre deteção e resolução.",
+      tag: "Diagnóstico Nutricional",
+      title: "Encurte o caminho entre detetar e diagnosticar",
       description:
-        "A partir das avaliações que já registou, a Alos sugere termos do Catálogo Português de Nutrição e compõe a frase PES (Problema, Etiologia, Sinais e Sintomas). Reveja, ajuste e valide em segundos.",
+        "A partir das avaliações que efetuou, a Alos sugere termos do Catálogo Português de Nutrição para compor a frase PES (Problema, Etiologia, Sinais e Sintomas). Reveja, ajuste e valide em segundos.",
       bgColor: "bg-alos-yellow", 
       tagBorderColor: "border-alos-brown",
       tagTextColor: "text-alos-brown",
@@ -45,10 +45,10 @@ export default function StickyFeatureStack() {
     },
     {
       id: 3,
-      tag: "Monitorização e Avaliação",
+      tag: "Monitorização",
       title: "Impacto no progresso clínico e nutricional.",
       description:
-        "Escolha, entre mais de 100 parâmetros clínicos, as medidas que contam para este doente e acompanhe-as juntas num painel visual, num determinado período.",
+        "A Alos permite cruzar mais de 100 parâmetros clínicos no mesmo painel visual para que compreenda melhor o estado nutricional atual do doente e as suas variações.",
       bgColor: "bg-alos-blue-light", 
       tagBorderColor: "border-alos-blue", 
       tagTextColor: "text-alos-blue", 
@@ -60,15 +60,15 @@ export default function StickyFeatureStack() {
   ];
 
   return (
-    <section ref={containerRef} className="w-full max-w-7xl mx-auto space-y-10 flex flex-col items-center px-4 md:px-4 lg:px-0">
+    <section ref={containerRef} className="w-full max-w-6xl mx-auto space-y-10 flex flex-col items-center px-4 md:px-4 lg:px-0">
       
       {/* SECTION HEADER */}
       <div className="text-center max-w-3xl space-y-0 flex flex-col items-center">
         <h2 className="text-2xl md:text-3xl lg:text-4xl max-w-[70%] font-serif text-primary-dark tracking-tight leading-tight md:leading-[1.1]">
           Do primeiro registo ao<br></br>resultado clínico.
         </h2>
-        <p className="text-xs md:text-sm md:leading-[1.4] mb-6 text-primary-dark max-w-[80%] md:max-w-[70%] md:max-w-2xl mx-auto">
-          Avaliação, diagnóstico, intervenção e monitorização ligados num só fluxo: o que regista numa fase alimenta a seguinte, sem repetir dados.
+        <p className="text-xs md:text-sm md:leading-[1.4] mb-6 text-primary-dark max-w-[80%] md:max-w-[75%] mx-auto">
+          Rastreio, avaliação, diagnóstico, intervenção e monitorização ligados num só fluxo: o que regista numa fase alimenta a seguinte, sem dados repetidos.
         </p>
       </div>
 
@@ -94,12 +94,12 @@ export default function StickyFeatureStack() {
               </span>
 
               {/* Headline */}
-              <h2 className={`text-3xl md:text-4xl lg:text-5xl max-w-[85%] font-serif text-primary-dark tracking-tight leading-tight md:leading-[1.1] ${feature.textColor}`}>
+              <h2 className={`text-3xl md:text-4xl lg:text-5xl sm:max-w-[75%] lg:max-w-[100%] font-serif text-primary-dark tracking-tight leading-tight md:leading-[1.1] ${feature.textColor}`}>
                 {feature.title}
               </h2>
 
               {/* Body Text */}
-              <p className={`text-sm md:text-lg md:leading-[1.4] text-primary-dark max-w-[80%] md:max-w-[70%] md:max-w-2xl ${feature.textColor}`}>
+              <p className={`text-sm md:text-lg md:leading-[1.4] text-primary-dark max-w-[80%] md:max-w-[85%] ${feature.textColor}`}>
                 {feature.description}
               </p>
             </div>

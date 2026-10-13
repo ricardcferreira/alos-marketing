@@ -13,7 +13,7 @@ export default function StudySection() {
     {
       id: 2,
       value: "52,3%",
-      boldText: 'Afirmam que os atuais sistemas hospitalares',
+      boldText: 'Afirmam que os sistemas hospitalares',
       text: 'são "superficiais no detalhe clínico".',
     },
     {
@@ -36,7 +36,7 @@ export default function StudySection() {
   ];
 
   return (
-    <section className="w-full max-w-7xl mx-auto flex flex-col gap-6 md:gap-10 px-4 md:px-4 lg:px-0">
+    <section className="w-full max-w-6xl mx-auto flex flex-col gap-6 md:gap-10 px-4 md:px-4 lg:px-0">
       
       {/* 1. Header */}
       <div className="flex flex-col md:flex-row justify-between items-start gap-6 md:gap-16 mb-2">
@@ -46,7 +46,7 @@ export default function StudySection() {
         </h2>
         
         {/* Description*/}
-        <div className="w-full md:w-1/2 flex flex-col items-start gap-6">
+        <div className="w-full md:w-1/3 flex flex-col items-start gap-6">
           <p className="text-sm md:text-base text-primary-dark/80 leading-relaxed">
             Profissionais de diferentes contextos clínicos: ULS, clínicas de saúde, IPSS e prática privada, todos membros efetivos da Ordem dos Nutricionistas.
           </p>

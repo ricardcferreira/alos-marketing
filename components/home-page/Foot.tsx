@@ -14,7 +14,7 @@ export default function Footer() {
         />
       </div>
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto bg-cream rounded-t-2xl md:rounded-t-[3rem] pt-10 md:pt-12 pb-8 px-6 md:px-12 flex flex-col min-h-[300px] justify-between">
+      <div className="relative z-10 w-full max-w-6xl mx-auto bg-cream rounded-t-2xl md:rounded-t-[3rem] pt-10 md:pt-12 pb-8 px-6 md:px-12 flex flex-col min-h-[300px] justify-between">
         
         <div className="flex flex-col md:flex-row justify-between items-start gap-12">
           

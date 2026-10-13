@@ -20,7 +20,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-black/20 to-transparent md:from-black/20 md:via-black/10 pointer-events-none" />
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-8 pt-32 md:pt-40 pb-24 flex flex-col items-start">
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-8 pt-32 md:pt-40 pb-24 flex flex-col items-start">
         
         <h1 className="text-3xl md:text-4xl lg:text-6xl font-serif mb-2 text-white tracking-tight leading-tight md:leading-[1.05] max-w-[90%] md:max-w-xl lg:max-w-2xl">
           O seu espaço de <br/>

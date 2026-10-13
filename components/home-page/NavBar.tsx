@@ -5,7 +5,7 @@ export default function NavBar() {
   return (
     <header className="fixed top-4 md:top-8 left-0 w-full z-50 px-4">
       {/* Contentor em formato "Pílula" Flutuante */}
-      <div className="max-w-7xl mx-auto h-[60px] md:h-[68px] bg-cream rounded-full px-4 md:px-6 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto h-[60px] md:h-[68px] bg-cream rounded-full px-4 md:px-6 flex items-center justify-between">
         
         {/* LOGO (Esquerda) */}
         <Link href="/" className="flex items-center gap-1">
