@@ -7,15 +7,15 @@ import { cn } from "@/lib/utils";
 
 export default function ClinicalSpecialtiesTabs() {
   const [activeTab, setActiveTab] = useState(0);
-
   const tabs = [
     {
       id: 0,
-      tabName: "Doença Metabólica",
+      tabName: "Síndrome Metabólica",
       title: "Visualize o impacto da sua intervenção",
       description:
-        "Acompanhe lado a lado a ingestão diária de fibra e e os valores de hemoglobina glicada (HbA1c), e compreenda a evolução do estado nutricional do doente ao longo do tempo.",
-      imageSrc: "/bg-low-fidelity/metabolica.svg",
+        "Acompanhe lado a lado a ingestão diária de fibra e a evolução do perfil lipídico, e compreenda o estado nutricional do doente ao longo do tempo.",
+      bgSrc: "/dreamy-texture/texture-one.webp",
+      blockframeSrc: "/low-fidelity/metabolica.svg",
       activeColor: "bg-alos-blue-light border-alos-blue text-alos-blue",
     },
     {
@@ -24,7 +24,8 @@ export default function ClinicalSpecialtiesTabs() {
       title: "Vá mais longe na avaliação do doente oncológico",
       description:
         "Reúna na mesma interface o rastreio SARC-F e os valores da força de preensão da mão, do perímetro geminal e da bioimpedância, para construir a frase PES em segundos: centralizamos todas as métricas para o diagnóstico da sarcopenia.",
-      imageSrc: "/bg-low-fidelity/oncologia.svg",
+      bgSrc: "/dreamy-texture/texture-two.webp",
+      blockframeSrc: "/low-fidelity/oncologia.svg",
       activeColor: "bg-alos-yellow border-alos-brown text-alos-brown",
     },
     {
@@ -33,7 +34,8 @@ export default function ClinicalSpecialtiesTabs() {
       title: "Não perca informação nas alas do internamento",
       description:
         "De acordo com o perfil do doente a Alos propõe a ferramenta de rastreio adequada e responde às perguntas com o que já foi registado. Valide cada resposta e veja a pontuação.",
-      imageSrc: "/bg-low-fidelity/internamento.svg",
+      bgSrc: "/dreamy-texture/texture-three.webp",
+      blockframeSrc: "/low-fidelity/internamento.svg",
       activeColor: "bg-alos-green-light border-alos-green text-alos-green",
     },
     {
@@ -42,25 +44,38 @@ export default function ClinicalSpecialtiesTabs() {
       title: "Acompanhe a trajetória de crescimento",
       description:
         "A Alos propõe a curva de referência adequada à idade e ao sexo da criança (OMS ou CDC) e coloca cada medição no gráfico, para ver o percentil e a trajetória.",
-      imageSrc: "/bg-low-fidelity/pediatria.svg",
+      bgSrc: "/dreamy-texture/texture-four.webp",
+      blockframeSrc: "/low-fidelity/pediatria.svg",
       activeColor: "bg-alos-yellow border-alos-brown text-alos-brown",
     },
     {
       id: 4,
-      tabName: "Doença Renal",
-      title: "Calcule com o peso certo, mesmo com edema.",
+      tabName: "Nefrologia",
+      title: "Facilite a matemática na doença renal",
       description:
-        "Na doença renal, o edema infla o peso na balança e distorce os cálculos. A Alos permite aplicar instantaneamente o peso corrigido do doente para efetuar os cálculos nutricionais com o máximo rigor clínico.",
-      imageSrc: "/bg-low-fidelity/renal.svg",
+        "A presença de edema distorce o peso real. A Alos permite aplicar instantaneamente o peso corrigido do doente para efetuar os cálculos nutricionais com o máximo rigor clínico.",
+      bgSrc: "/dreamy-texture/texture-five.webp",
+      blockframeSrc: "/low-fidelity/renal.svg",
       activeColor: "bg-alos-blue-light border-alos-blue text-alos-blue",
     },
     {
       id: 5,
-      tabName: "Desporto",
-      title: "O desporto exige precisão ao milímetro",
+      tabName: "Gastrenterologia",
+      title: "Nutrição Gastrenterologica",
       description:
-        "Seja no alto rendimento ou no desporto amador, a Alos integra a rigorosa metodologia ISAK para processar a antropometria avançada do atleta.",
-      imageSrc: "/",
+        "",
+      bgSrc: "/dreamy-texture/texture-seven.webp",
+      blockframeSrc: "/",
+      activeColor: "bg-alos-green-light border-alos-green text-alos-green",
+    },
+    {
+      id: 6,
+      tabName: "Desporto",
+      title: "Foca-te ao milímetro. A Alos faz as contas.",
+      description:
+        "Do alto rendimento ao desporto amador, registe pregas cutâneas, perímetros e diâmetros segundo a metodologia ISAK. A Alos calcula a soma de pregas e acompanha a evolução do atleta ao longo da época.",
+      bgSrc: "/dreamy-texture/texture-six.webp",
+      blockframeSrc: "/low-fidelity/desporto.svg",
       activeColor: "bg-alos-green-light border-alos-green text-alos-green",
     }
   ];
@@ -110,18 +125,32 @@ export default function ClinicalSpecialtiesTabs() {
           </CalButton>
         </div>
 
-        {/* Lado Direito - Imagem */}
+        {/* Right side - Image optimized in layers */}
         <div className="w-full md:w-1/2 mt-4 md:mt-0">
           <div className="relative w-full aspect-[4/3] rounded-[1.5rem] overflow-hidden bg-cream-light">
-            {/* Bloco de fallback caso a imagem seja "/" como no código de exemplo */}
-            {tabs[activeTab].imageSrc !== "/" ? (
-              <Image
-                src={tabs[activeTab].imageSrc}
-                alt={`Interface demonstrativa de ${tabs[activeTab].title}`}
-                fill
-                className="object-cover w-full h-full"
-                priority
-              />
+            
+            {tabs[activeTab].blockframeSrc !== "/" ? (
+              <>
+                {/* LAYER 1: Background (WebP) */}
+                <Image
+                  src={tabs[activeTab].bgSrc}
+                  alt={`Fundo decorativo para ${tabs[activeTab].title}`}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover z-0"
+                  priority={activeTab === 0}
+                />
+                
+                {/* LAYER 2: Blockframe (SVG) */}
+                <Image
+                  src={tabs[activeTab].blockframeSrc}
+                  alt={`Interface demonstrativa de ${tabs[activeTab].title}`}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover z-10" 
+                  priority={activeTab === 0}
+                />
+              </>
             ) : (
               <div className="absolute inset-0 flex items-center justify-center p-6 text-center text-xs text-primary-dark">
                 Mockup do ecrã para: {tabs[activeTab].title}

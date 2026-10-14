@@ -22,7 +22,7 @@ export default function Footer() {
           <div>
             <Link href="/" className="flex items-center gap-1">
               <img 
-                src="/alos-mono.svg" 
+                src="/logos/alos-mono.svg" 
                 alt="Alos Health Logo" 
                 className="w-auto h-[24px] md:h-[28px] object-contain shrink-0"  
               />

@@ -7,7 +7,7 @@ export function Header() {
         {/* BRAND LOGO */}
         <Link href="/" className="flex items-center gap-1">
           <img 
-            src="/alos-logo.svg" 
+            src="/logos/alos-logo.svg" 
             alt="Alos Health Logo" 
             className="w-auto h-[32px] object-contain shrink-0" 
           />

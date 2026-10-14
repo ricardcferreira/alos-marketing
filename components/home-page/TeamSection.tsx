@@ -19,7 +19,7 @@ export default function TeamSection() {
         <div className="flex flex-col">
           <div className="relative w-full aspect-[1/1] rounded-[1.5rem] overflow-hidden mb-6 bg-cream-light">
             <Image 
-              src="/portraits/founder-francisco.png"
+              src="/portraits/francisco.webp"
               alt="Francisco Ribeiro"
               fill
               className="object-cover"
@@ -39,7 +39,7 @@ export default function TeamSection() {
         <div className="flex flex-col">
           <div className="relative w-full aspect-[1/1] rounded-[1.5rem] overflow-hidden mb-6 bg-cream-light">
             <Image 
-              src="/portraits/founder-ricardo.png"
+              src="/portraits/ricardo.webp"
               alt="Ricardo Ferreira"
               fill
               className="object-cover"
@@ -59,7 +59,7 @@ export default function TeamSection() {
         <div className="flex flex-col">
           <div className="relative w-full aspect-[1/1] rounded-[1.5rem] overflow-hidden mb-6 bg-cream-light">
             <Image 
-              src="/portraits/founder-phoebe.png"
+              src="/portraits/phoebe.webp"
               alt="Phoebe"
               fill
               className="object-cover"

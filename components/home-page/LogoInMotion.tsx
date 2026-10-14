@@ -91,7 +91,7 @@ export default function ScrollRevealSection() {
           className="absolute right-1/2 top-1/2 -translate-y-1/2 h-[300px] w-[150px] md:h-[500px] md:w-[250px] lg:h-[700px] lg:w-[350px] z-0 pointer-events-none"
         >
           <Image
-            src="/landscape/logo-l.png"
+            src="/illustrations/logo-l.png"
             alt="Alos Logo Left"
             fill
             className="object-contain object-right"
@@ -105,7 +105,7 @@ export default function ScrollRevealSection() {
           className="absolute left-1/2 top-1/2 -translate-y-1/2 h-[300px] w-[150px] md:h-[500px] md:w-[250px] lg:h-[700px] lg:w-[350px] z-0 pointer-events-none"
         >
           <Image
-            src="/landscape/logo-r.png"
+            src="/illustrations/logo-r.png"
             alt="Alos Logo Right"
             fill
             className="object-contain object-left"

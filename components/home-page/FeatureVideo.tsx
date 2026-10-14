@@ -30,37 +30,49 @@ export default function HeroVideoSection() {
       {/* 2. MAIN VIDEO BLOCK */}
       <div className="relative w-full aspect-[4/3] md:aspect-[16/9] bg-cream rounded-[1.5rem] overflow-hidden">
               
-        {/* Label inside the video */}
-        <div className="w-full h-full text-center bg-gradient-to-t from-transparent via-primary-dark/5 to-primary-dark/15 absolute top-0 pt-2 sm:pt-4 left-1/2 -translate-x-1/2 z-20 pointer-events-none">
-          <p className="text-white text-xs md:text-sm font-medium">Veja como funciona</p>
-        </div>
-
-        {/* --- Banner --- */}
+        {/* --- Imagem de Fundo (Banner) --- */}
         <Image 
-            src="/landscape/video-feature.png"
+            src="/landscape/feature-bg.webp"
             alt="Alos Health Professional using platform"
             fill
+            sizes="(max-width: 768px) 100vw, 100vw"
+            priority // Sendo o Hero, deve carregar de imediato
             className="object-cover object-center z-0"
         />
 
-        {/* --- Blockframe --- */}
-        <div className="hidden md:block absolute right-[4%] top-1/3 -translate-y-1/2 w-[35%] aspect-square z-10 pointer-events-none">
-          <Image 
-              src="/landscape/video-blockframe.svg"
-              alt="Diagrama do Processo de Cuidado Nutricional"
-              fill
-              className="object-cover"
-          />
+        {/* --- PAINEL ESQUERDO COM BLUR (Apenas Desktop) --- */}
+        <div className="hidden md:flex absolute left-0 top-0 h-full w-[35%] bg-gradient-to-l from-transparent via-primary-dark/10 to-primary-dark/30 backdrop-blur z-10 flex-col items-center justify-center">
+          
+          {/* Label no topo esquerdo do painel */}
+          <div className="w-full h-full text-center bg-gradient-to-t from-transparent via-primary-dark/5 to-primary-dark/15 absolute top-0 pt-4 sm:pt-4 left-1/2 -translate-x-1/2 z-20 pointer-events-none">
+          <p className="text-white text-xs left-5 absolute md:text-sm font-medium">Veja como funciona</p>
+          </div>
+
+          {/* Blockframe (A ilustração fica perfeitamente centrada graças ao flex do contentor pai) */}
+          <div className="relative w-[80%] aspect-square pointer-events-none">
+            <Image 
+                src="/illustrations/pcn-ui.webp"
+                alt="Diagrama do Processo de Cuidado Nutricional"
+                fill
+                sizes="(max-width: 768px) 0vw, 30vw"
+                className="object-contain" // Mudado de cover para contain para não cortar o gráfico circular
+            />
+          </div>
         </div>
   
-        {/* Subtle Gradient Overlay */}
+        {/* --- Label e Gradiente para Mobile (Já que o painel com blur é escondido) --- */}
+        <div className="md:hidden w-full h-full text-center bg-gradient-to-t from-transparent via-primary-dark/5 to-primary-dark/20 absolute top-0 left-0 z-20 pointer-events-none">
+          <p className="text-white text-xs left-5 top-5 absolute font-medium">Veja como funciona</p>
+        </div>
+  
+        {/* Overlay global escuro e subtil para garantir contraste (colocado atrás do painel esquerdo) */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30 z-10 pointer-events-none" />
   
-        {/* Play Button Indicator */}
+        {/* --- Play Button Indicator --- */}
         <button 
                 onClick={() => setIsVideoOpen(true)}
                 aria-label="Play video"
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 w-8 h-8 bg-cream rounded-full flex items-center justify-center transition-transform hover:scale-110 cursor-pointer group"
+                className="absolute bottom-0 right-0 -translate-x-1/2 -translate-y-1/2 z-30 w-8 h-8 md:w-12 md:h-12 bg-cream-light rounded-full flex items-center justify-center transition-transform hover:scale-110 cursor-pointer group"
               >
                 <div className="w-3 h-3 ml-1 bg-primary-dark [clip-path:polygon(0%_0%,_100%_50%,_0%_100%)] transition-colors" />
             </button>
@@ -71,21 +83,18 @@ export default function HeroVideoSection() {
       {isVideoOpen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4 md:p-8 backdrop-blur-md">
           
-          {/* Close Background Click */}
           <div className="absolute inset-0" onClick={() => setIsVideoOpen(false)} />
 
-          {/* Close Button */}
           <button 
             onClick={() => setIsVideoOpen(false)}
-            className="absolute top-6 right-6 md:top-10 md:right-10 cursor-pointer w-6 h-6 flex items-center justify-center bg-white/20 hover:bg-white/30 rounded-full text-white transition-colors z-20"
+            className="absolute top-6 right-6 md:top-10 md:right-10 cursor-pointer w-10 h-10 flex items-center justify-center bg-white/20 hover:bg-white/30 rounded-full text-white transition-colors z-20"
             aria-label="Close video"
           >
-            <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
 
-          {/* Iframe Container */}
           <div className="w-full max-w-5xl aspect-video rounded-xl md:rounded-2xl overflow-hidden relative z-10">
             <iframe 
               className="absolute inset-0 w-full h-full"
