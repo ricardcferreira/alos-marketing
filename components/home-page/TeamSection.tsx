@@ -8,7 +8,7 @@ export default function TeamSection() {
       <div className="w-full max-w-6xl mx-auto flex flex-col">
         <div className="mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-primary-dark tracking-tight leading-tight md:leading-snug">
-            Fundada por <span className="italic">Francisco Ribeiro</span> e <span className="italic">Ricardo Ferreira,</span> a Alos combina um profundo conhecimento clínico com a inovação digital estratégica no setor da saúde moderna.
+            Fundada por <span className="italic">Francisco Ribeiro</span> e <span className="italic">Ricardo Ferreira,</span> a Alos combina um profundo conhecimento clínico com a inovação digital estratégica no setor da saúde moderna
           </h2>
         </div>
       

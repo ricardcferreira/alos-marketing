@@ -97,7 +97,7 @@ export default function StickyFeatureStack() {
       {/* SECTION HEADER */}
       <div className="text-center max-w-3xl space-y-0 flex flex-col items-center">
         <h2 className="text-2xl sm:text-3xl md:text-4xl max-w-[70%] font-serif text-primary-dark tracking-tight leading-tight md:leading-[1.1]">
-          Do primeiro registo ao<br></br>resultado clínico.
+          Do primeiro registo ao<br></br>resultado clínico
         </h2>
         <p className="text-xs md:text-sm md:leading-[1.4] mb-2 text-primary-dark max-w-[80%] sm:max-w-[60%] md:max-w-[70%] mx-auto">
           Rastreio, avaliação, diagnóstico, intervenção e monitorização: o que regista numa fase alimenta a seguinte, sem dados repetidos.

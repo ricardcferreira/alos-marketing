@@ -62,10 +62,10 @@ export default function ScrollRevealSection() {
           className="relative z-10 flex flex-col items-center text-center space-y-2 max-w-4xl px-4 md:px-0"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl max-w-[70%] sm:max-w-[60%] lg:max-w-[85%] font-serif text-primary-dark tracking-tight leading-tight md:leading-[1.1]">
-            Queremos ouvir os <span className="italic">nutricionistas. </span>
+            Queremos ouvir os <span className="italic">nutricionistas</span>
           </h2>
           <p className="text-xs md:text-lg md:leading-[1.4] mb-6 text-primary-dark max-w-[60%] sm:max-w-[40%] lg:max-w-[55%] md:max-w-[55%]">
-            O Estudo-Piloto é o passo seguinte: perceber como a Alos poderá integrar o seu dia-a-dia clínico.
+            O estudo-piloto é o passo seguinte: perceber como a Alos poderá integrar o seu dia-a-dia clínico.
           </p>
 
           <div className="flex gap-3">

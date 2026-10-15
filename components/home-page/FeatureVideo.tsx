@@ -13,7 +13,7 @@ export default function HeroVideoSection() {
       {/* 1. HEADER (Title, Description, Button) */}
       <div className="text-center max-w-3xl mb-12 space-y-4 flex flex-col items-center">
         <h2 className="text-2xl sm:text-3xl md:text-4xl max-w-[60%] lg:max-w-[70%] font-serif text-primary-dark tracking-tight leading-tight md:leading-[1.1]">
-            O ciclo completo do cuidado nutricional, num só lugar.
+            O ciclo completo do cuidado nutricional, num só lugar
         </h2>
         <p className="text-xs md:text-sm md:leading-[1.4] text-primary-dark mb-6 max-w-[80%] sm:max-w-[60%] md:max-w-[70%] mx-auto">
           A Alos centraliza o histórico nutricional do doente e apoia cada passo do Processo de Cuidado Nutricional, do rastreio à monitorização, para que os registos se moldem ao seu fluxo de trabalho.
