@@ -18,7 +18,7 @@ const bentoContent = {
   },
   bigData: {
     title: "A diferença entre fazer o trabalho e conseguir prová-lo",
-    description: "Transforme a prática clínica diária em evidência quantificável. O diretório de dados da Alos permite isolar perfis demográficos e clínicos, cruzar protocolos terapêuticos, como o impacto de um suplemento na massa muscular, e comparar resultados entre grupos em segundos. Os dados estruturados tornam-se reportáveis e demonstráveis, perante o doente, ou perante quem gere a sua unidade.",
+    description: "O diretório de dados da Alos permite isolar perfis demográficos e clínicos, cruzar protocolos terapêuticos, como o impacto de um suplemento na massa muscular, e comparar resultados entre grupos em segundos. Os dados estruturados tornam-se reportáveis e demonstráveis, perante o doente, ou perante quem gere a sua unidade.",
     bgSrc: "/dreamy-texture/texture-five.webp",
     blockframeSrc: "/low-fidelity/diretorio.svg",
   }
