@@ -18,9 +18,9 @@ const bentoContent = {
   },
   bigData: {
     title: "A diferença entre fazer o trabalho e conseguir prová-lo",
-    description: "Os dados estruturados tornam-se reportáveis e demonstráveis, perante o doente, ou perante quem gere a sua unidade.",
-    bgSrc: "/",
-    blockframeSrc: "/",
+    description: "Transforme a prática clínica diária em evidência quantificável. O diretório de dados da Alos permite isolar perfis demográficos e clínicos, cruzar protocolos terapêuticos, como o impacto de um suplemento na massa muscular, e comparar resultados entre grupos em segundos. Os dados estruturados tornam-se reportáveis e demonstráveis, perante o doente, ou perante quem gere a sua unidade.",
+    bgSrc: "/dreamy-texture/texture-five.webp",
+    blockframeSrc: "/low-fidelity/diretorio.svg",
   }
 };
 
@@ -91,7 +91,7 @@ export default function BentoFeatures() {
           <h3 className="text-2xl md:text-3xl lg:text-4xl max-w-[85%] font-serif text-primary-dark tracking-tight leading-tight md:leading-[1.1]">
             {bentoContent.bigData.title}
           </h3>
-          <p className="text-xs md:text-sm md:leading-[1.4] text-primary-dark max-w-[80%] md:max-w-[70%] md:max-w-2xl mt-4">
+          <p className="text-xs md:text-sm md:leading-[1.4] text-primary-dark max-w-[80%] md:max-w-[80%] mt-4">
             {bentoContent.bigData.description}
           </p>
         </div>
