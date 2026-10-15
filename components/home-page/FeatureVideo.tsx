@@ -12,11 +12,11 @@ export default function HeroVideoSection() {
       
       {/* 1. HEADER (Title, Description, Button) */}
       <div className="text-center max-w-3xl mb-12 space-y-4 flex flex-col items-center">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl max-w-[70%] font-serif text-primary-dark tracking-tight leading-tight md:leading-[1.1]">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl max-w-[60%] lg:max-w-[70%] font-serif text-primary-dark tracking-tight leading-tight md:leading-[1.1]">
             O ciclo completo do cuidado nutricional, num só lugar.
         </h2>
-        <p className="text-xs md:text-sm md:leading-[1.4] text-primary-dark max-w-[80%] mb-6 md:max-w-[70%] md:max-w-2xl mx-auto">
-          A Alos centraliza o histórico nutricional do doente e apoia cada passo do Processo de Cuidado Nutricional, do rastreio à monitorização, para que chegue à consulta já com o quadro completo.
+        <p className="text-xs md:text-sm md:leading-[1.4] text-primary-dark mb-6 max-w-[80%] sm:max-w-[60%] md:max-w-[70%] mx-auto">
+          A Alos centraliza o histórico nutricional do doente e apoia cada passo do Processo de Cuidado Nutricional, do rastreio à monitorização, para que os registos se moldem ao seu fluxo de trabalho.
         </p>
         
         <CalButton 
@@ -48,14 +48,14 @@ export default function HeroVideoSection() {
           <p className="text-white text-xs left-5 absolute md:text-sm font-medium">Veja como funciona</p>
           </div>
 
-          {/* Blockframe (A ilustração fica perfeitamente centrada graças ao flex do contentor pai) */}
-          <div className="relative w-[80%] aspect-square pointer-events-none">
+          {/* Blockframe */}
+          <div className="relative w-[85%] aspect-square pointer-events-none">
             <Image 
-                src="/illustrations/pcn-ui.webp"
+                src="/illustrations/ncp-cycle.webp"
                 alt="Diagrama do Processo de Cuidado Nutricional"
                 fill
                 sizes="(max-width: 768px) 0vw, 30vw"
-                className="object-contain" // Mudado de cover para contain para não cortar o gráfico circular
+                className="object-contain"
             />
           </div>
         </div>
@@ -74,7 +74,7 @@ export default function HeroVideoSection() {
                 aria-label="Play video"
                 className="absolute bottom-0 right-0 -translate-x-1/2 -translate-y-1/2 z-30 w-8 h-8 md:w-12 md:h-12 bg-cream-light rounded-full flex items-center justify-center transition-transform hover:scale-110 cursor-pointer group"
               >
-                <div className="w-3 h-3 ml-1 bg-primary-dark [clip-path:polygon(0%_0%,_100%_50%,_0%_100%)] transition-colors" />
+                <div className="w-3 h-3 md:w-4 md:h-4 ml-0.5 md:ml-1 bg-primary-dark [clip-path:polygon(0%_0%,_100%_50%,_0%_100%)] transition-colors" />
             </button>
               
       </div>

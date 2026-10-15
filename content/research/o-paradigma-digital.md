@@ -1,8 +1,8 @@
 ---
-title: "Um novo espaço de decisão nutricional"
+title: "Tempo de Cuidar"
 type: "Inquérito"
 date: "Jul 23, 2026"
-leadWallTitle: "A ausência de uma infraestrutura digital construída especificamente para o nutricionista clínico."
+leadWallTitle: "Como a ausência de uma plataforma digital construída para o nutricionista clínico afeta os cuidados de saúde."
 driveLink: "https://drive.google.com/file/d/1hOO7Vu1zXLG9k-qEGIDAqOBFVUTrUk0L/view?usp=sharing"
 ---
 

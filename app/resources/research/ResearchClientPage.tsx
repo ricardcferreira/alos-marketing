@@ -50,13 +50,16 @@ export default function ResearchClientPage({ study }: { study: ResearchArticle }
       <NavBar />
       
       {/* Article Header (Dynamic) */}
-      <div className="mx-auto max-w-3xl px-8 space-y-4 mb-4 text-center">
+      <div className="mx-auto max-w-xl px-8 space-y-4 mb-4 text-center">
         <span className="text-xs inline-block">
           {study.type} · {formattedDate}
         </span>
         <h1 className="sm:text-4xl font-serif font-medium leading-tight">
           {study.title}
         </h1>
+        <p className="font-medium mb-6 leading-tight">
+          {study.leadWallTitle}
+        </p>
         <button 
           onClick={() => setIsModalOpen(true)}
           className="inline-flex cursor-pointer items-center justify-center font-medium rounded-lg px-3 py-2 text-sm transition-colors border bg-alos-green-light text-alos-green hover:bg-alos-green border-alos-green hover:text-white"

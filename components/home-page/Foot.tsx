@@ -3,14 +3,15 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="relative w-full pt-40 md:pt-52 px-4 md:px-8">
+    <footer className="relative w-full pt-18 md:pt-52 px-4 md:px-8">
       
       <div className="absolute inset-0 z-0 overflow-hidden">
         <Image
-          src="/landscape/apples-bg.png"
+          src="/landscape/apples-bg.webp"
           alt="Maçãs em fundo"
           fill
-          className="object-cover object-center"
+          sizes="(max-width: 768px) 100vw, 50vw"
+          className="object-cover object-bottom"
         />
       </div>
 

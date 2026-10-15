@@ -15,10 +15,10 @@ export default function Home() {
       <NavBar />
       <HeroSection />
       <FeatureVideo />
-      <ClinicalSpecialtiesTabs />
       <StickyFeatureStack/>
-      <BentoFeatures />
+      <ClinicalSpecialtiesTabs />
       <ScrollRevealSection />
+      <BentoFeatures />
       <TeamSection />
       <StudySection />
       <Footer />

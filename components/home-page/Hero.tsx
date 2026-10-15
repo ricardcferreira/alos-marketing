@@ -9,7 +9,7 @@ export default function HeroSection() {
       
       {/* Background Image */}
       <Image
-        src="/landscape/hero-bg.svg" 
+        src="/landscape/clinician-bg.webp" 
         alt="Alos Health Nutricionista em consulta"
         fill
         className="object-cover lg:object-right"
@@ -27,8 +27,8 @@ export default function HeroSection() {
           decisão nutricional
         </h1>
         
-        <span className="text-sm md:text-lg text-white leading-[1.4] md:leading-[1.3] mb-4 max-w-[70%] md:max-w-sm lg:max-w-md">
-          O seu raciocínio clínico, registado uma só vez e pronto a usar em cada consulta. Menos trabalho administrativo, mais tempo com o doente.
+        <span className="text-sm md:text-lg text-white leading-[1.4] md:leading-[1.3] mb-4 max-w-[70%] md:max-w-sm lg:max-w-lg">
+          O seu raciocínio clínico, sem repetir registos, centralizado no Processo de Cuidado Nutricional. Menos trabalho administrativo, mais tempo com o doente.
         </span>
 
         <CalButton 

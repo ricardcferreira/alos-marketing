@@ -29,7 +29,7 @@ export default function StudySection() {
       id: 1,
       category: "Inquérito",
       date: "Jul 23, 2026",
-      title: "Um novo espaço de decisão nutricional",
+      title: "Tempo de Cuidar",
       description: "A ausência de uma infraestrutura digital construída especificamente para o nutricionista clínico. O estudo mapeia as ferramentas digitais usadas no dia a dia, o tempo dedicado a tarefas administrativas e a forma como os profissionais avaliam o seu impacto na prática clínica, na aplicação do Processo de Cuidado Nutricional e na perceção de valor profissional.",
       href: "/resources/research/o-paradigma-digital",
     },
@@ -46,7 +46,7 @@ export default function StudySection() {
         </h2>
         
         {/* Description*/}
-        <div className="w-full md:w-1/3 flex flex-col items-start gap-6">
+        <div className="w-full md:w-2/5 flex flex-col items-start gap-6">
           <p className="text-sm md:text-base text-primary-dark/80 leading-relaxed">
             Profissionais de diferentes contextos clínicos: ULS, clínicas de saúde, IPSS e prática privada, todos membros efetivos da Ordem dos Nutricionistas.
           </p>

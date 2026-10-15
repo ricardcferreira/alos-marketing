@@ -10,73 +10,73 @@ export default function ClinicalSpecialtiesTabs() {
   const tabs = [
     {
       id: 0,
-      tabName: "Síndrome Metabólica",
-      title: "Visualize o impacto da sua intervenção",
-      description:
-        "Acompanhe lado a lado a ingestão diária de fibra e a evolução do perfil lipídico, e compreenda o estado nutricional do doente ao longo do tempo.",
-      bgSrc: "/dreamy-texture/texture-one.webp",
-      blockframeSrc: "/low-fidelity/metabolica.svg",
-      activeColor: "bg-alos-blue-light border-alos-blue text-alos-blue",
-    },
-    {
-      id: 1,
-      tabName: "Oncologia",
-      title: "Vá mais longe na avaliação do doente oncológico",
-      description:
-        "Reúna na mesma interface o rastreio SARC-F e os valores da força de preensão da mão, do perímetro geminal e da bioimpedância, para construir a frase PES em segundos: centralizamos todas as métricas para o diagnóstico da sarcopenia.",
-      bgSrc: "/dreamy-texture/texture-two.webp",
-      blockframeSrc: "/low-fidelity/oncologia.svg",
-      activeColor: "bg-alos-yellow border-alos-brown text-alos-brown",
-    },
-    {
-      id: 2,
       tabName: "Internamento",
       title: "Não perca informação nas alas do internamento",
       description:
-        "De acordo com o perfil do doente a Alos propõe a ferramenta de rastreio adequada e responde às perguntas com o que já foi registado. Valide cada resposta e veja a pontuação.",
+        "De acordo com o perfil do doente, a Alos propõe a ferramenta de rastreio adequada e responde às perguntas com o que já foi registado. Valide cada resposta e veja a pontuação.",
       bgSrc: "/dreamy-texture/texture-three.webp",
       blockframeSrc: "/low-fidelity/internamento.svg",
-      activeColor: "bg-alos-green-light border-alos-green text-alos-green",
+      activeColor: "bg-alos-blue-light text-alos-blue border border-alos-blue",
     },
     {
-      id: 3,
+      id: 1,
+      tabName: "Gastroenterologia",
+      title: "Compreenda a evolução da sintomatologia",
+      description:
+        "A Alos converte registos qualitativos, como a gravidade da distensão e dor abdominal ou a frequência de alterações do trânsito intestinal, em gráficos dinâmicos.",
+      bgSrc: "/dreamy-texture/texture-six.webp",
+      blockframeSrc: "/low-fidelity/gastro.svg",
+      activeColor: "bg-alos-blue-light text-alos-blue border border-alos-blue",
+    },
+    {
+      id: 2,
       tabName: "Pediatria",
       title: "Acompanhe a trajetória de crescimento",
       description:
         "A Alos propõe a curva de referência adequada à idade e ao sexo da criança (OMS ou CDC) e coloca cada medição no gráfico, para ver o percentil e a trajetória.",
       bgSrc: "/dreamy-texture/texture-four.webp",
       blockframeSrc: "/low-fidelity/pediatria.svg",
-      activeColor: "bg-alos-yellow border-alos-brown text-alos-brown",
+      activeColor: "bg-alos-blue-light text-alos-blue border border-alos-blue",
     },
     {
-      id: 4,
+      id: 3,
       tabName: "Nefrologia",
       title: "Facilite a matemática na doença renal",
       description:
         "A presença de edema distorce o peso real. A Alos permite aplicar instantaneamente o peso corrigido do doente para efetuar os cálculos nutricionais com o máximo rigor clínico.",
       bgSrc: "/dreamy-texture/texture-five.webp",
-      blockframeSrc: "/low-fidelity/renal.svg",
-      activeColor: "bg-alos-blue-light border-alos-blue text-alos-blue",
+      blockframeSrc: "/low-fidelity/nefrologia.svg",
+      activeColor: "bg-alos-blue-light text-alos-blue border border-alos-blue",
+    },
+    {
+      id: 4,
+      tabName: "Oncologia",
+      title: "Vá mais longe na avaliação do doente oncológico",
+      description:
+        "Reúna na mesma interface o rastreio SARC-F, a força de preensão da mão, o perímetro geminal e a bioimpedância, para construir a frase PES em segundos: centralizamos todas as métricas para o diagnóstico da sarcopenia (consenso europeu EWGSOP2).",
+      bgSrc: "/dreamy-texture/texture-two.webp",
+      blockframeSrc: "/low-fidelity/oncologia.svg",
+      activeColor: "bg-alos-blue-light text-alos-blue border border-alos-blue",
     },
     {
       id: 5,
-      tabName: "Gastrenterologia",
-      title: "Nutrição Gastrenterologica",
+      tabName: "Síndrome Metabólica",
+      title: "Visualize o impacto da sua intervenção",
       description:
-        "",
-      bgSrc: "/dreamy-texture/texture-seven.webp",
-      blockframeSrc: "/",
-      activeColor: "bg-alos-green-light border-alos-green text-alos-green",
+        "Acompanhe lado a lado a ingestão diária de fibra dietética e a análise do perfil lipídico, e compreenda a evolução do estado nutricional do doente ao longo do tempo.",
+      bgSrc: "/dreamy-texture/texture-one.webp",
+      blockframeSrc: "/low-fidelity/metabolica.svg",
+      activeColor: "bg-alos-blue-light text-alos-blue border border-alos-blue",
     },
     {
       id: 6,
       tabName: "Desporto",
-      title: "Foca-te ao milímetro. A Alos faz as contas.",
+      title: "Avalie a composição corporal ao milímetro",
       description:
-        "Do alto rendimento ao desporto amador, registe pregas cutâneas, perímetros e diâmetros segundo a metodologia ISAK. A Alos calcula a soma de pregas e acompanha a evolução do atleta ao longo da época.",
-      bgSrc: "/dreamy-texture/texture-six.webp",
+        "Do alto rendimento ao desporto amador, registe pregas cutâneas, perímetros e diâmetros segundo a metodologia ISAK. A Alos calcula o somatório de pregas para representar a massa gorda do atleta.",
+      bgSrc: "/dreamy-texture/texture-nine.webp",
       blockframeSrc: "/low-fidelity/desporto.svg",
-      activeColor: "bg-alos-green-light border-alos-green text-alos-green",
+      activeColor: "bg-alos-blue-light text-alos-blue border border-alos-blue",
     }
   ];
 
@@ -134,7 +134,7 @@ export default function ClinicalSpecialtiesTabs() {
                 {/* LAYER 1: Background (WebP) */}
                 <Image
                   src={tabs[activeTab].bgSrc}
-                  alt={`Fundo decorativo para ${tabs[activeTab].title}`}
+                  alt={`Mockup do ecrã para: ${tabs[activeTab].title}`}
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover z-0"
@@ -144,7 +144,7 @@ export default function ClinicalSpecialtiesTabs() {
                 {/* LAYER 2: Blockframe (SVG) */}
                 <Image
                   src={tabs[activeTab].blockframeSrc}
-                  alt={`Interface demonstrativa de ${tabs[activeTab].title}`}
+                  alt={`Mockup do ecrã para: ${tabs[activeTab].title}`}
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover z-10" 
