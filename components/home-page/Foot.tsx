@@ -41,7 +41,6 @@ export default function Footer() {
               <p className="text-sm md:text-base font-medium text-primary-dark tracking-tight">Recursos</p>
               <div className="flex flex-col space-y-3 text-xs md:text-sm font-light text-primary-dark/70">
                 <Link href="https://aloshealth.com/resources/research" className="hover:text-primary-dark transition-colors w-fit">Investigação</Link>
-                <Link href="https://support.aloshealth.com/" className="hover:text-primary-dark transition-colors w-fit">Central de Ajuda</Link>
                 <Link href="https://www.notion.so/Compliance-35ff3de024038097b62bd4204b09beb2?source=copy_link" className="hover:text-primary-dark transition-colors w-fit">Central de Confiança</Link>
               </div>
             </div>
