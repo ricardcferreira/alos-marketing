@@ -2,7 +2,7 @@
 title: "Tempo de Cuidar"
 type: "Inquérito"
 date: "Jul 23, 2026"
-leadWallTitle: "Como a ausência de uma plataforma digital construída para o nutricionista clínico afeta os cuidados de saúde."
+leadWallTitle: "Como ferramentas digitais genéricas, não desenhadas sobre  o Processo de Cuidado Nutricional, se refletem no dia a dia de 104 nutricionistas clínicos"
 driveLink: "https://drive.google.com/file/d/1hOO7Vu1zXLG9k-qEGIDAqOBFVUTrUk0L/view?usp=sharing"
 ---
 
@@ -13,8 +13,8 @@ driveLink: "https://drive.google.com/file/d/1hOO7Vu1zXLG9k-qEGIDAqOBFVUTrUk0L/vi
   <strong class="text-primary-dark">Métodos:</strong> Realizou-se um estudo quantitativo, transversal, através de inquérito por questionário a uma amostra de 104 nutricionistas (membros efetivos da Ordem dos Nutricionistas) com prática clínica ativa em Portugal. O objetivo centrou-se no mapeamento do ecossistema tecnológico atual, na avaliação da carga administrativa e no seu impacto operacional e emocional.
 </p>
 <p>
-  <strong class="text-primary-dark">Resultados:</strong> Os dados revelam que 51,9% dos profissionais apresentam níveis críticos de esgotamento associados ao trabalho burocrático. A insatisfação operacional é superior no grupo de profissionais que gere ecossistemas fragmentados (duas ou mais ferramentas em simultâneo). Adicionalmente, 52,3% dos utilizadores de <em>softwares</em> de gestão hospitalar classificam-nos como "superficiais no detalhe clínico", e 54,5% reportam que o registo em texto livre bloqueia a análise sistemática de dados. O tratamento de dados (cálculos nutricionais) lidera isoladamente como a etapa de maior desperdício de tempo.
+  <strong class="text-primary-dark">Resultados:</strong> Os dados revelam que 51,9% dos profissionais apresentam níveis críticos de esgotamento associados ao trabalho burocrático. A insatisfação operacional é superior no grupo de profissionais que gere ecossistemas fragmentados (duas ou mais ferramentas em simultâneo). Adicionalmente, 52,3% dos utilizadores de <em>softwares</em> de gestão hospitalar classificam-nos como "superficiais no detalhe clínico", e 54,5% reportam que o registo em texto livre bloqueia a análise sistemática de dados. O tratamento de dados lidera isoladamente como o ato de maior desperdício de tempo (40,7%).
 </p>
 <p>
-  <strong class="text-primary-dark">Conclusões:</strong> A fricção sistémica gerada por <em>softwares</em> generalistas atua como um catalisador mensurável do desgaste profissional na nutrição clínica. A modernização do setor exige a adoção urgente de Sistemas de Apoio à Decisão Clínica (CDSS) que garantam a correlação instantânea entre variáveis clínicas, minimizem a carga de cliques face ao texto livre e assegurem a interoperabilidade total com as infraestruturas hospitalares.
+  <strong class="text-primary-dark">Conclusões:</strong> A fricção sistémica gerada por <em>softwares</em> generalistas atua como um catalisador mensurável do desgaste profissional na nutrição clínica. A modernização do setor exige a adoção urgente de Sistemas de Apoio à Decisão Clínica (CDSS) que garantam a correlação instantânea entre variáveis clínicas, minimizem a carga de cliques face ao texto livre e assegurem a interoperabilidade total com as infraestruturas digitais já implementadas.
 </p>

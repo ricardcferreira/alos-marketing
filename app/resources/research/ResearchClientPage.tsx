@@ -87,8 +87,8 @@ export default function ResearchClientPage({ study }: { study: ResearchArticle }
             <X width="12" height="12" />
           </button>
 
-          <div className="w-full md:w-1/2 min-h-[40vh] md:h-full bg-gradient-to-tl from-white via-alos-green-light to-alos-green flex flex-col justify-center items-center p-10 md:p-16 lg:p-20 relative">
-            <span className="text-4xl sm:text-5xl font-serif text-white text-center max-w-sm tracking-tight leading-tighter">
+          <div className="w-full md:w-1/2 min-h-[40vh] md:h-full bg-gradient-to-tl from-cream-light via-alos-blue-light to-alos-green-light flex flex-col justify-center items-center p-10 md:p-16 lg:p-20 relative">
+            <span className="text-4xl sm:text-5xl font-serif text-white text-center max-w-md tracking-tight leading-tighter">
               {study.leadWallTitle}
             </span>
           </div>
