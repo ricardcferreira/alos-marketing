@@ -124,7 +124,7 @@ export default function StickyFeatureStack() {
               </span>
 
               <h2
-                className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl max-w-[80%] sm:max-w-[60%] md:max-w-[100%] font-serif tracking-tight leading-tight md:leading-[1.1] ${feature.textColor}`}
+                className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl max-w-[75%] sm:max-w-[60%] md:max-w-[100%] font-serif tracking-tight leading-tight md:leading-[1.1] ${feature.textColor}`}
               >
                 {feature.title}
               </h2>

@@ -35,7 +35,7 @@ export default function ScrollRevealSection() {
       ref={containerRef}
       className="relative w-full bg-cream-light my-6"
     >
-      <div className="relative h-[320px] md:h-[480px] lg:h-[620px] w-full flex items-center justify-center overflow-hidden px-4 md:px-8">
+      <div className="relative h-[320px] md:h-[480px] lg:h-[620px] w-full flex items-center justify-center overflow-hidden px-4 md:px-8 mb-8">
 
         {/* --- CENTER TEXT --- */}
         <motion.div

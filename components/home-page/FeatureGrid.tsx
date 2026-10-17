@@ -88,7 +88,7 @@ export default function BentoFeatures() {
       <div className="w-full bg-cream rounded-[1.5rem] p-6 md:p-12 flex flex-col md:flex-row gap-8 items-top">
         
         <div className="w-full md:w-1/2 flex flex-col items-start pt-2 md:pt-0">
-          <h3 className="text-2xl md:text-3xl lg:text-4xl max-w-[85%] font-serif text-primary-dark tracking-tight leading-tight md:leading-[1.1]">
+          <h3 className="text-2xl md:text-3xl lg:text-4xl max-w-[95%] sm:max-w-[85%] font-serif text-primary-dark tracking-tight leading-tight md:leading-[1.1]">
             {bentoContent.bigData.title}
           </h3>
           <p className="text-xs md:text-sm md:leading-[1.4] text-primary-dark max-w-[80%] md:max-w-[80%] mt-4">
