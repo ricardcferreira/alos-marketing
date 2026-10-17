@@ -8,19 +8,19 @@ export default function StudySection() {
       id: 1,
       value: "57,8%",
       boldText: "Reportam",
-      text: "que o registo em texto livre bloqueia a análise sistemática de dados.",
+      text: "que o registo em texto livre bloqueia a análise sistemática de dados",
     },
     {
       id: 2,
       value: "51,0%",
       boldText: 'Afirmam que os sistemas hospitalares',
-      text: 'são "superficiais no detalhe clínico".',
+      text: 'são "superficiais no detalhe clínico"',
     },
     {
       id: 3,
       value: "41,3%",
       boldText: "Indicam o tratamento de dados",
-      text: "como a etapa que mais tempo consome.",
+      text: "como a etapa que mais tempo consome",
     },
   ];
 

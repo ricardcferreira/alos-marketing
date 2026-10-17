@@ -46,7 +46,7 @@ export default function ScrollRevealSection() {
             Queremos ouvir os <span className="italic">nutricionistas</span>
           </h2>
           <p className="text-xs md:text-lg md:leading-[1.4] mb-6 text-primary-dark max-w-[60%] sm:max-w-[40%] lg:max-w-[55%] md:max-w-[55%]">
-            O estudo-piloto é o passo seguinte: perceber como a Alos poderá integrar o seu dia-a-dia clínico.
+            O estudo-piloto é o passo seguinte: perceber como a Alos poderá integrar o seu dia a dia clínico.
           </p>
 
           <div className="flex gap-3">

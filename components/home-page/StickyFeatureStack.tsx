@@ -118,33 +118,34 @@ export default function StickyFeatureStack() {
             {/* LEFT SIDE - COPY */}
             <div className="w-full md:w-1/2 flex flex-col p-6 md:p-12 items-start md:pr-12 shrink-0">
               <span
-                className={`border px-3 py-1 rounded-full text-xs md:text-sm font-semibold mb-4 md:mb-6 w-fit ${feature.tagBorderColor} ${feature.tagTextColor}`}
+                className={`border px-3 py-1 rounded-full text-xs sm:text-xs md:text-xs lg:text-sm font-semibold mb-4 md:mb-6 w-fit ${feature.tagBorderColor} ${feature.tagTextColor}`}
               >
                 {feature.tag}
               </span>
 
               <h2
-                className={`text-2xl md:text-4xl lg:text-5xl sm:max-w-[75%] lg:max-w-[100%] font-serif tracking-tight leading-tight md:leading-[1.1] mb-0 sm:mb-3 ${feature.textColor}`}
+                className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl max-w-[80%] sm:max-w-[60%] md:max-w-[100%] font-serif tracking-tight leading-tight md:leading-[1.1] ${feature.textColor}`}
               >
                 {feature.title}
               </h2>
 
               <p
-                className={`text-xs sm:text-sm md:text-lg md:leading-[1.4] max-w-[90%] md:max-w-[85%] ${feature.textColor}`}
+                className={`text-xs sm:text-sm md:text-lg md:leading-[1.4] max-w-[80%] sm:max-w-[60%] md:max-w-[85%] ${feature.textColor}`}
               >
                 {feature.description}
               </p>
             </div>
 
             {/* RIGHT SIDE - IMAGE MOCKUP */}
-            {/* 2. flex-1 min-h-0 lets the image area absorb height differences on mobile */}
             <div className="w-full flex-1 min-h-0 md:w-1/2 flex items-center justify-center relative pb-6 px-6 md:py-6 lg:py-10">
-              <div className="relative w-full h-full md:h-auto md:aspect-[3/3] lg:aspect-[4/3] rounded-[1.5rem] overflow-hidden bg-transparent">
+              <div className="relative w-full h-full max-h-[270px] md:max-h-none md:h-auto md:aspect-[3/3] lg:aspect-[4/3] rounded-[1.5rem] bg-transparent">
                 {feature.imageSrc !== "/" ? (
                   <Image
                     src={feature.imageSrc}
                     alt={`Mockup do ecrã para: ${feature.title}`}
                     fill
+                    loading={index === 0 ? "eager" : "lazy"}
+                    priority={index === 0}
                     className="object-contain"
                     style={{
                       transform: `translate(${feature.imageOffset.x}%, ${feature.imageOffset.y}%) scale(${feature.imageScale})`,
