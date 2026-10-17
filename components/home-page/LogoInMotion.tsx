@@ -17,44 +17,25 @@ export default function ScrollRevealSection() {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  const { scrollYProgress: desktopProgress } = useScroll({
+  const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start start", "end end"],
+    offset: ["start 0.85", "center 0.45"],
   });
 
-  const xLeftDesktop = useTransform(desktopProgress, [0, 0.8], ["0vw", "-22vw"]);
-  const xRightDesktop = useTransform(desktopProgress, [0, 0.8], ["0vw", "22vw"]);
-  const opacityDesktop = useTransform(desktopProgress, [0.1, 0.8], [0, 1]);
-  const yDesktop = useTransform(desktopProgress, [0.1, 0.8], ["40px", "0px"]);
+  const maxDistance = isMobile ? "25vw" : "22vw";
+  const negMaxDistance = isMobile ? "-25vw" : "-22vw";
 
-  // ---------- MOBILE (no pinning) ----------
-  // 0 = section top is at 90% of the viewport height (just entering)
-  // 1 = section center is at 55% of the viewport height
-  const { scrollYProgress: mobileProgress } = useScroll({
-    target: containerRef,
-    offset: ["start 0.9", "center 0.55"],
-  });
-
-  const distance = isMobile ? "20vw" : "22vw";
-  const negativeDistance = isMobile ? "-20vw" : "-22vw";
-
-  const xLeftMobile = useTransform(mobileProgress, [0, 0.8], ["0vw", "-20vw"]);
-  const xRightMobile = useTransform(mobileProgress, [0, 0.8], ["0vw", "20vw"]);
-  // Text starts hidden and is revealed after the halves begin to open
-  const opacityMobile = useTransform(mobileProgress, [0.3, 0.9], [0, 1]);
-  const yMobile = useTransform(mobileProgress, [0.3, 0.9], ["40px", "0px"]);
-
-  // Pick the right set of transforms for the current breakpoint
-  const xLeft = isMobile ? xLeftMobile : xLeftDesktop;
-  const xRight = isMobile ? xRightMobile : xRightDesktop;
-  const textOpacity = isMobile ? opacityMobile : opacityDesktop;
-  const textY = isMobile ? yMobile : yDesktop;
+  const xLeft = useTransform(scrollYProgress, [0, 1], ["0vw", negMaxDistance]);
+  const xRight = useTransform(scrollYProgress, [0, 1], ["0vw", maxDistance]);
+  const textOpacity = useTransform(scrollYProgress, [0.2, 1], [0, 1]);
+  const textY = useTransform(scrollYProgress, [0.2, 1], ["30px", "0px"]);
 
   return (
-    // Only desktop gets the extra scroll length
-    <section ref={containerRef} className="relative w-full bg-cream-light md:h-[150vh]">
-      {/* Mobile: fixed height that fits the content. Desktop: sticky + full screen */}
-      <div className="relative h-[400px] w-full flex items-center justify-center overflow-hidden px-4 md:sticky md:top-0 md:h-screen md:px-8">
+    <section
+      ref={containerRef}
+      className="relative w-full bg-cream-light my-6"
+    >
+      <div className="relative h-[320px] md:h-[480px] lg:h-[620px] w-full flex items-center justify-center overflow-hidden px-4 md:px-8">
 
         {/* --- CENTER TEXT --- */}
         <motion.div
@@ -87,12 +68,13 @@ export default function ScrollRevealSection() {
         {/* --- LEFT HALF OF THE LOGO --- */}
         <motion.div
           style={{ x: xLeft }}
-          className="absolute right-1/2 top-1/2 -translate-y-1/2 h-[300px] w-[150px] md:h-[500px] md:w-[250px] lg:h-[700px] lg:w-[350px] z-0 pointer-events-none"
+          className="absolute right-1/2 top-1/2 -translate-y-1/2 h-[280px] w-[140px] md:h-[460px] md:w-[230px] lg:h-[600px] lg:w-[300px] z-0 pointer-events-none"
         >
           <Image
             src="/illustrations/logo-l.png"
             alt="Alos Logo Left"
             fill
+            sizes="(max-width: 768px) 140px, (max-width: 1024px) 230px, 300px"
             className="object-contain object-right"
             priority
           />
@@ -101,12 +83,13 @@ export default function ScrollRevealSection() {
         {/* --- RIGHT HALF OF THE LOGO --- */}
         <motion.div
           style={{ x: xRight }}
-          className="absolute left-1/2 top-1/2 -translate-y-1/2 h-[300px] w-[150px] md:h-[500px] md:w-[250px] lg:h-[700px] lg:w-[350px] z-0 pointer-events-none"
+          className="absolute left-1/2 top-1/2 -translate-y-1/2 h-[280px] w-[140px] md:h-[460px] md:w-[230px] lg:h-[600px] lg:w-[300px] z-0 pointer-events-none"
         >
           <Image
             src="/illustrations/logo-r.png"
             alt="Alos Logo Right"
             fill
+            sizes="(max-width: 768px) 140px, (max-width: 1024px) 230px, 300px"
             className="object-contain object-left"
             priority
           />

@@ -6,19 +6,19 @@ export default function StudySection() {
   const stats = [
     {
       id: 1,
-      value: "54,5%",
+      value: "57,8%",
       boldText: "Reportam",
       text: "que o registo em texto livre bloqueia a análise sistemática de dados.",
     },
     {
       id: 2,
-      value: "52,3%",
+      value: "51,0%",
       boldText: 'Afirmam que os sistemas hospitalares',
       text: 'são "superficiais no detalhe clínico".',
     },
     {
       id: 3,
-      value: "40,7%",
+      value: "41,3%",
       boldText: "Indicam o tratamento de dados",
       text: "como a etapa que mais tempo consome.",
     },
@@ -28,7 +28,7 @@ export default function StudySection() {
     {
       id: 1,
       category: "Inquérito",
-      date: "Jul 23, 2026",
+      date: "Out 2026",
       title: "Tempo de Cuidar",
       description: "A ausência de uma infraestrutura digital construída especificamente para o nutricionista clínico. O estudo mapeia as ferramentas digitais usadas no dia a dia, o tempo dedicado a tarefas administrativas e a forma como os profissionais avaliam o seu impacto na prática clínica, na aplicação do Processo de Cuidado Nutricional e na perceção de valor profissional.",
       href: "/resources/research/o-paradigma-digital",
@@ -42,7 +42,7 @@ export default function StudySection() {
       <div className="flex flex-col md:flex-row justify-between items-start gap-6 md:gap-16 mb-2">
         {/* Left Title */}
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-primary-dark tracking-tight leading-tight md:leading-[1.1]">
-          <span className="italic">104 nutricionistas</span> contaram<br className="hidden md:block" /> a sua realidade e como veem<br className="hidden md:block" /> o futuro da profissão
+          <span className="italic">109 nutricionistas</span> contaram<br className="hidden md:block" /> a sua realidade e como veem<br className="hidden md:block" /> o futuro da profissão
         </h2>
         
         {/* Description*/}

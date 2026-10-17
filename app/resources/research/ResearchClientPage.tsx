@@ -39,12 +39,6 @@ export default function ResearchClientPage({ study }: { study: ResearchArticle }
     setIsSubmitting(false);
   };
 
-  const formattedDate = new Date(study.date).toLocaleDateString('pt-PT', {
-    day: 'numeric',
-    month: 'short',
-    year: 'numeric'
-  }).toUpperCase();
-
   return (
     <main className="min-h-screen mt-38 bg-cream-light text-primary-dark">
       <NavBar />
@@ -52,7 +46,7 @@ export default function ResearchClientPage({ study }: { study: ResearchArticle }
       {/* Article Header (Dynamic) */}
       <div className="mx-auto max-w-xl px-8 space-y-4 mb-4 text-center">
         <span className="text-xs inline-block">
-          {study.type} · {formattedDate}
+          {study.type} · {study.date}
         </span>
         <h1 className="sm:text-4xl font-serif font-medium leading-tight">
           {study.title}

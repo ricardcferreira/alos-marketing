@@ -22,6 +22,7 @@ export default function TeamSection() {
               src="/portraits/francisco.webp"
               alt="Francisco Ribeiro"
               fill
+              sizes="(max-width: 768px) 100vw, 33vw"
               className="object-cover"
             />
           </div>
@@ -42,6 +43,7 @@ export default function TeamSection() {
               src="/portraits/ricardo.webp"
               alt="Ricardo Ferreira"
               fill
+              sizes="(max-width: 768px) 100vw, 33vw"
               className="object-cover"
             />
           </div>
@@ -62,6 +64,7 @@ export default function TeamSection() {
               src="/portraits/phoebe.webp"
               alt="Phoebe"
               fill
+              sizes="(max-width: 768px) 100vw, 33vw"
               className="object-cover"
             />
           </div>
