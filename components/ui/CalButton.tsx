@@ -6,16 +6,20 @@ import { cn } from "@/lib/utils";
 
 interface CalButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   calLink: string;
-  variant?: "primary" | "secondary"; 
+  variant?: "primary" | "secondary";
+  section?: string;
 }
 
 export default function CalButton({ 
   calLink, 
   variant = "primary",
+  section,
   className, 
-  children, 
+  children,
+  onClick,
   ...props 
 }: CalButtonProps) {
+  
   useEffect(() => {
     (async function () {
       const cal = await getCalApi();
@@ -27,22 +31,29 @@ export default function CalButton({
     })();
   }, []);
 
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    // Call the global gtag function directly 
+    if (section && typeof window !== "undefined" && typeof (window as any).gtag === "function") {
+      (window as any).gtag("event", "clique_conversa_inicial", {
+        seccao_origem: section,
+      });
+      console.log(`✅ gtag fired: clique_conversa_inicial na secção [${section}]`);
+    }
+
+    if (onClick) {
+      onClick(e);
+    }
+  };
+
   return (
     <button
       data-cal-link={calLink}
       data-cal-config='{"layout":"month_view"}'
+      onClick={handleClick}
       className={cn(
-        // Classes Base Estruturais (comuns a todas as variantes)
         "inline-flex cursor-pointer items-center justify-center font-medium rounded-xl px-3 py-2 text-xs md:text-xs lg:text-sm transition-colors border",
-        
-        // Classes de Variante (apenas cores)
-        variant === "primary" && 
-          "bg-alos-green-light text-alos-green hover:bg-alos-green border-alos-green hover:text-white",
-        
-        variant === "secondary" && 
-          "bg-alos-yellow text-alos-brown hover:bg-alos-brown border-transparent hover:text-white",
-        
-        // Classes injetadas via props (ex: margens)
+        variant === "primary" && "bg-alos-green-light text-alos-green hover:bg-alos-green border-alos-green hover:text-white",
+        variant === "secondary" && "bg-alos-yellow text-alos-brown hover:bg-alos-brown border-transparent hover:text-white",
         className
       )}
       {...props}

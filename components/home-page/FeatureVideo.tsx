@@ -7,6 +7,18 @@ import CalButton from "@/components/ui/CalButton";
 export default function HeroVideoSection() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
+  const handleOpenVideo = () => {
+    setIsVideoOpen(true); 
+    
+    // Call the global gtag function directly
+    if (typeof window !== "undefined" && typeof (window as any).gtag === "function") {
+      (window as any).gtag("event", "play_video_demo", {
+        seccao_origem: "video_feature",
+      });
+      console.log("✅ gtag fired: play_video_demo");
+    }
+  };
+
   return (
     <section className="w-full max-w-6xl mx-auto flex flex-col items-center px-4 md:px-4 lg:px-0">
       
@@ -22,6 +34,7 @@ export default function HeroVideoSection() {
         <CalButton 
           calLink="https://cal.com/aloshealth/conversa-inicial" 
           variant="primary"
+          section="video_feature"
         >
           Conversa Inicial
         </CalButton>
@@ -36,19 +49,16 @@ export default function HeroVideoSection() {
             alt="Alos Health Professional using platform"
             fill
             sizes="(max-width: 768px) 100vw, 100vw"
-            priority // Sendo o Hero, deve carregar de imediato
+            priority
             className="object-cover object-center z-0"
         />
 
         {/* --- PAINEL ESQUERDO COM BLUR (Apenas Desktop) --- */}
         <div className="hidden md:flex absolute left-0 top-0 h-full w-[35%] bg-gradient-to-l from-transparent via-primary-dark/10 to-primary-dark/30 backdrop-blur z-10 flex-col items-center justify-center">
-          
-          {/* Label no topo esquerdo do painel */}
           <div className="w-full h-full text-center bg-gradient-to-t from-transparent via-primary-dark/5 to-primary-dark/15 absolute top-0 pt-4 sm:pt-4 left-1/2 -translate-x-1/2 z-20 pointer-events-none">
-          <p className="text-white text-xs left-5 absolute md:text-sm font-medium">Veja como funciona</p>
+            <p className="text-white text-xs left-5 absolute md:text-sm font-medium">Veja como funciona</p>
           </div>
 
-          {/* Blockframe */}
           <div className="relative w-[85%] aspect-square pointer-events-none">
             <Image 
                 src="/illustrations/ncp-cycle.webp"
@@ -60,22 +70,21 @@ export default function HeroVideoSection() {
           </div>
         </div>
   
-        {/* --- Label e Gradiente para Mobile (Já que o painel com blur é escondido) --- */}
+        {/* --- Label e Gradiente para Mobile --- */}
         <div className="md:hidden w-full h-full text-center bg-gradient-to-t from-transparent via-primary-dark/5 to-primary-dark/20 absolute top-0 left-0 z-20 pointer-events-none">
           <p className="text-white text-xs left-5 top-5 absolute font-medium">Veja como funciona</p>
         </div>
   
-        {/* Overlay global escuro e subtil para garantir contraste (colocado atrás do painel esquerdo) */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30 z-10 pointer-events-none" />
   
-        {/* --- Play Button Indicator --- */}
+        {/* 4. PLAY BUTTON ATUALIZADO COM O EVENTO DO GA4 */}
         <button 
-                onClick={() => setIsVideoOpen(true)}
-                aria-label="Play video"
-                className="absolute bottom-0 right-0 -translate-x-1/2 -translate-y-1/2 z-30 w-8 h-8 md:w-12 md:h-12 bg-cream-light rounded-full flex items-center justify-center transition-transform hover:scale-110 cursor-pointer group"
-              >
-                <div className="w-3 h-3 md:w-4 md:h-4 ml-0.5 md:ml-1 bg-primary-dark [clip-path:polygon(0%_0%,_100%_50%,_0%_100%)] transition-colors" />
-            </button>
+          onClick={handleOpenVideo}
+          aria-label="Play video"
+          className="absolute bottom-0 right-0 -translate-x-1/2 -translate-y-1/2 z-30 w-8 h-8 md:w-12 md:h-12 bg-cream-light rounded-full flex items-center justify-center transition-transform hover:scale-110 cursor-pointer group"
+        >
+          <div className="w-3 h-3 md:w-4 md:h-4 ml-0.5 md:ml-1 bg-primary-dark [clip-path:polygon(0%_0%,_100%_50%,_0%_100%)] transition-colors" />
+        </button>
               
       </div>
 

@@ -53,6 +53,7 @@ export default function ScrollRevealSection() {
             <CalButton
               calLink="https://cal.com/aloshealth/conversa-inicial"
               variant="primary"
+              section="logo_in_motion"
             >
               Conversa Inicial
             </CalButton>

@@ -27,6 +27,7 @@ export default function NavBar() {
             <CalButton 
               calLink="https://cal.com/aloshealth/conversa-inicial" 
               variant="primary"
+              section="navigation_bar"
             >
               Conversa Inicial
             </CalButton>

@@ -120,6 +120,7 @@ export default function ClinicalSpecialtiesTabs() {
           <CalButton 
             calLink="https://cal.com/aloshealth/conversa-inicial" 
             variant="primary"
+            section="clinical_specialties_tab"
           >
             Conversa Inicial
           </CalButton>
