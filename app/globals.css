@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 @import "tailwindcss";
 
 :root {
+  --font-inter: 'Inter', sans-serif;
   --radius: 0.75rem;
 
   --background: #F9F6F3;
@@ -78,7 +80,6 @@
   --color-ring: var(--ring);
 }
 
-/* Envolver o CSS base na diretiva @layer base */
 @layer base {
   * {
     border-color: var(--border);
@@ -161,7 +162,6 @@
   }
 }
 
-/* Utilitários personalizados entram na @layer utilities */
 @layer utilities {
   .scrollbar-hide::-webkit-scrollbar {
     display: none;

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Inter } from "next/font/google";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import CookieBanner from "@/components/cookies/CookieBanner";
+import Analytics from "@/components/cookies/Analytics";
 
 const clearface = localFont({
   src: [
@@ -12,23 +12,25 @@ const clearface = localFont({
   variable: "--font-clearface",
 });
 
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-inter",
-});
-
 export const metadata: Metadata = {
   title: 'Alos Health | O seu espaço de decisão nutricional',
-  description: 'O primeiro software construído sobre o Processo de Cuidados Nutricionais.',
+  description: 'O primeiro software construído sobre o Processo de Cuidado Nutricional.',
 }
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html
-      lang="en"
-      className={`${clearface.variable} ${inter.variable} font-sans antialiased`}>
-      <body className="min-h-full flex flex-col">{children}</body>
+      lang="pt-PT"
+      className={`${clearface.variable} font-sans antialiased`}>
+      <body className="min-h-full flex flex-col relative">
+        {children}
+        <CookieBanner />
+        <Analytics />
+      </body>
     </html>
   );
 }
