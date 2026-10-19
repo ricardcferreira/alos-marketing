@@ -51,7 +51,7 @@ export default function StudySection() {
             Profissionais de diferentes contextos clínicos: Centros Hospitalares, Unidades Locais de Saúde, Clínicas de Saúde, Instituições Particulares de Solidariedade Social, entre outros, todos membros efetivos da Ordem dos Nutricionistas.
           </p>
           <Link 
-            href="/resources/research/o-paradigma-digital" 
+            href="/resources/research/tempo-de-cuidar" 
             className="inline-flex items-center justify-center bg-alos-yellow text-alos-brown hover:bg-alos-brown border-alos-brown border hover:text-white transition-colors font-medium rounded-xl px-6 py-2.5 text-xs sm:text-sm"
           >
             Ler o estudo

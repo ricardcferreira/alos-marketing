@@ -7,7 +7,6 @@ export default function NavBar() {
       {/* Contentor em formato "Pílula" Flutuante */}
       <div className="max-w-6xl mx-auto h-[60px] md:h-[68px] bg-cream rounded-full px-4 md:px-6 flex items-center justify-between">
         
-        {/* LOGO (Esquerda) */}
         <Link href="/" className="flex items-center gap-1">
           <img 
             src="/logos/alos-mono.svg" 
@@ -33,12 +32,12 @@ export default function NavBar() {
             </CalButton>
           </div>
           
-          <Link 
+          <a 
             href="https://app.aloshealth.com" 
             className="inline-flex items-center justify-center font-medium rounded-full bg-cream md:rounded-xl border border-primary-dark/50 text-primary-dark hover:bg-cream-light transition-colors px-4 py-1.5 md:py-2 text-xs md:text-sm"
           >
             Login
-          </Link>
+          </a>
         </div>
         
       </div>

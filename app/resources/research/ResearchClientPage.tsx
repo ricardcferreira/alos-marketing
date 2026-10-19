@@ -18,6 +18,16 @@ export default function ResearchClientPage({ study }: { study: ResearchArticle }
     email: ''
   });
 
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+    
+    if (typeof window !== "undefined" && typeof (window as any).gtag === "function") {
+      (window as any).gtag("event", "abrir_formulario_estudo", {
+        estudo: study.slug || study.title,
+      });
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -30,6 +40,13 @@ export default function ResearchClientPage({ study }: { study: ResearchArticle }
     if (res.success) {
       setIsSuccess(true);
       
+      if (typeof window !== "undefined" && typeof (window as any).gtag === "function") {
+        (window as any).gtag("event", "submeter_formulario_estudo", {
+          estudo: study.slug || study.title,
+        });
+        console.log(`✅ GA4 Event: submeter_formulario_estudo (${study.slug || study.title})`);
+      }
+
       if (study.driveLink) {
         window.open(study.driveLink, "_blank");
       }
@@ -55,7 +72,7 @@ export default function ResearchClientPage({ study }: { study: ResearchArticle }
           {study.leadWallTitle}
         </p>
         <button 
-          onClick={() => setIsModalOpen(true)}
+          onClick={handleOpenModal} 
           className="inline-flex cursor-pointer items-center justify-center font-medium rounded-lg px-3 py-2 text-sm transition-colors border bg-alos-green-light text-alos-green hover:bg-alos-green border-alos-green hover:text-white"
         >
           Ler o estudo completo
@@ -68,6 +85,15 @@ export default function ResearchClientPage({ study }: { study: ResearchArticle }
           className="space-y-6 text-gray-700 leading-relaxed text-sm"
           dangerouslySetInnerHTML={{ __html: study.html }} 
         />
+        
+        <div className="mt-12 flex justify-center">
+            <button 
+              onClick={handleOpenModal}
+              className="inline-flex cursor-pointer items-center justify-center font-medium rounded-lg px-6 py-3 text-sm transition-colors border bg-alos-green-light text-alos-green hover:bg-alos-green border-alos-green hover:text-white"
+            >
+              Ler o estudo completo
+            </button>
+        </div>
       </div>
 
       {/* The Full-Screen Lead Wall Modal (Dynamic) */}

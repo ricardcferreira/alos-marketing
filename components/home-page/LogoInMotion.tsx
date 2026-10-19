@@ -58,7 +58,7 @@ export default function ScrollRevealSection() {
               Conversa Inicial
             </CalButton>
             <Link 
-              href="/resources/research/o-paradigma-digital" 
+              href="/resources/research/tempo-de-cuidar" 
               className="inline-flex items-center justify-center bg-cream-light text-primary-dark hover:bg-cream border-primary-dark/50 border transition-colors font-medium rounded-xl px-6 py-2.5 text-xs sm:text-sm"
             >
               Ler o estudo

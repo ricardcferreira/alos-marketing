@@ -3,7 +3,7 @@ title: "Tempo de Cuidar"
 type: "Inquérito"
 date: "Out 2026"
 leadWallTitle: "Um retrato quantitativo sobre a carga administrativa, a fragmentação digital e o seu impacto em 109 nutricionistas clínicos em Portugal"
-driveLink: "https://drive.google.com/file/d/1Pk85UX0BSehLaGijyhbUVxZ08qOR8AJq/view?usp=sharing"
+driveLink: "https://drive.google.com/file/d/1Ag3cnLweedTArQR7YcKss2FkSQaH9eRN/view?usp=sharing"
 image: "/square/magazine.webp"
 ---
 

@@ -15,7 +15,6 @@ export default function HeroVideoSection() {
       (window as any).gtag("event", "play_video_demo", {
         seccao_origem: "video_feature",
       });
-      console.log("✅ gtag fired: play_video_demo");
     }
   };
 

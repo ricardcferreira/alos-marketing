@@ -37,7 +37,6 @@ export default function CalButton({
       (window as any).gtag("event", "clique_conversa_inicial", {
         seccao_origem: section,
       });
-      console.log(`✅ gtag fired: clique_conversa_inicial na secção [${section}]`);
     }
 
     if (onClick) {
