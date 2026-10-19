@@ -85,15 +85,6 @@ export default function ResearchClientPage({ study }: { study: ResearchArticle }
           className="space-y-6 text-gray-700 leading-relaxed text-sm"
           dangerouslySetInnerHTML={{ __html: study.html }} 
         />
-        
-        <div className="mt-12 flex justify-center">
-            <button 
-              onClick={handleOpenModal}
-              className="inline-flex cursor-pointer items-center justify-center font-medium rounded-lg px-6 py-3 text-sm transition-colors border bg-alos-green-light text-alos-green hover:bg-alos-green border-alos-green hover:text-white"
-            >
-              Ler o estudo completo
-            </button>
-        </div>
       </div>
 
       {/* The Full-Screen Lead Wall Modal (Dynamic) */}
@@ -140,7 +131,7 @@ export default function ResearchClientPage({ study }: { study: ResearchArticle }
                     )}
                     <button 
                       onClick={() => setIsModalOpen(false)}
-                      className="w-full bg-transparent text-primary-dark hover:bg-cream-light border border-primary-dark/50 px-8 py-3.5 rounded-sm font-medium cursor-pointer transition-colors"
+                      className="w-full bg-cream-light text-primary-dark hover:bg-cream border border-primary-dark/15 px-8 py-3.5 rounded-sm font-medium cursor-pointer transition-colors"
                     >
                       Voltar para a página
                     </button>
