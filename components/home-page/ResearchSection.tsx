@@ -48,7 +48,7 @@ export default function StudySection() {
         {/* Description*/}
         <div className="w-full md:w-2/5 flex flex-col items-start gap-6">
           <p className="text-sm md:text-base text-primary-dark/80 leading-relaxed">
-            Profissionais de diferentes contextos clínicos: ULS, clínicas de saúde, IPSS e prática privada, todos membros efetivos da Ordem dos Nutricionistas.
+            Profissionais de diferentes contextos clínicos: Centros Hospitalares, Unidades Locais de Saúde, Clínicas de Saúde, Instituições Particulares de Solidariedade Social, entre outros, todos membros efetivos da Ordem dos Nutricionistas.
           </p>
           <Link 
             href="/resources/research/o-paradigma-digital" 
