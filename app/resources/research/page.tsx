@@ -29,12 +29,12 @@ export default function ResearchIndexPage() {
               return (
                 <div key={study.slug} className="flex flex-col md:flex-row gap-12 mb-10">
                   
-                  <div className="w-full sm:w-[420px] h-[320px] shrink-0 rounded-sm overflow-hidden relative bg-gradient-to-tl from-white via-alos-green-light to-alos-green flex flex-col items-center justify-center">
+                  <div className="w-full sm:w-[420px] h-auto shrink-0 rounded-sm overflow-hidden relative bg-gradient-to-tl from-white via-alos-green-light to-alos-green flex flex-col items-center justify-center">
                     {study.image ? (
                       <img 
                         src={study.image} 
                         alt={study.title} 
-                        className="w-full h-full object-cover absolute inset-0"
+                        className="object-contain"
                       />
                     ) : (
                       /* Fallback */

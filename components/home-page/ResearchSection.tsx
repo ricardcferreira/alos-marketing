@@ -31,7 +31,7 @@ export default function StudySection() {
       date: "Out 2026",
       title: "Tempo de Cuidar",
       description: "A ausência de uma infraestrutura digital construída especificamente para o nutricionista clínico. O estudo mapeia as ferramentas digitais usadas no dia a dia, o tempo dedicado a tarefas administrativas e a forma como os profissionais avaliam o seu impacto na prática clínica, na aplicação do Processo de Cuidado Nutricional e na perceção de valor profissional.",
-      href: "/resources/research/o-paradigma-digital",
+      href: "/resources/research/tempo-de-cuidar",
     },
   ];
 
