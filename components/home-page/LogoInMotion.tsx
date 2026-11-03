@@ -51,7 +51,6 @@ export default function ScrollRevealSection() {
 
           <div className="flex gap-3">
             <CalButton
-              calLink="https://cal.com/aloshealth/conversa-inicial"
               variant="primary"
               section="logo_in_motion"
             >

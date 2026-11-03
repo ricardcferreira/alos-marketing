@@ -32,7 +32,6 @@ export default function HeroSection() {
         </span>
 
         <CalButton 
-          calLink="https://cal.com/aloshealth/conversa-inicial" 
           variant="primary"
           section="hero"
         >

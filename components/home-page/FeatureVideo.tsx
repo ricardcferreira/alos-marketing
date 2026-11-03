@@ -31,7 +31,6 @@ export default function HeroVideoSection() {
         </p>
         
         <CalButton 
-          calLink="https://cal.com/aloshealth/conversa-inicial" 
           variant="primary"
           section="video_feature"
         >

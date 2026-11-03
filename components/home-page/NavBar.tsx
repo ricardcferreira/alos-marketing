@@ -24,7 +24,6 @@ export default function NavBar() {
           {/* Escondido em mobile (hidden), visível a partir de tablet (md:block) */}
           <div className="hidden md:block">
             <CalButton 
-              calLink="https://cal.com/aloshealth/conversa-inicial" 
               variant="primary"
               section="navigation_bar"
             >
