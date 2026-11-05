@@ -52,25 +52,31 @@ export async function submitStudyLead(data: {
     }
 
     // 2. Enviar Lead para o HubSpot Diretamente
-    if (HUBSPOT_ACCESS_TOKEN) {
+    if (!HUBSPOT_ACCESS_TOKEN) {
+      console.error("❌ ERRO CRÍTICO: HUBSPOT_ACCESS_TOKEN não está definido nas variáveis de ambiente de produção!");
+    } else {
       try {
+        const cleanEmail = data.email.trim().toLowerCase();
         const hubspotData = {
           properties: {
-            firstname: data.firstName,
-            lastname: data.lastName,
+            firstname: data.firstName.trim(),
+            lastname: data.lastName.trim(),
             ultimo_estudo_descarregado: data.studyName
           }
         };
 
-        // A. Tentar ATUALIZAR o contacto existente pelo email
-        let hubspotResponse = await fetch(`https://api.hubapi.com/crm/v3/objects/contacts/${data.email}?idProperty=email`, {
-          method: 'PATCH',
-          headers: {
-            'Authorization': `Bearer ${HUBSPOT_ACCESS_TOKEN}`,
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(hubspotData)
-        });
+        // A. Tentar ATUALIZAR o contacto existente pelo email (com encodeURIComponent)
+        let hubspotResponse = await fetch(
+          `https://api.hubapi.com/crm/v3/objects/contacts/${encodeURIComponent(cleanEmail)}?idProperty=email`,
+          {
+            method: 'PATCH',
+            headers: {
+              'Authorization': `Bearer ${HUBSPOT_ACCESS_TOKEN}`,
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(hubspotData)
+          }
+        );
 
         // B. Se o contacto não existir (Erro 404), CRIAR um novo contacto
         if (hubspotResponse.status === 404) {
@@ -82,21 +88,19 @@ export async function submitStudyLead(data: {
             },
             body: JSON.stringify({
               properties: {
-                email: data.email,
+                email: cleanEmail,
                 ...hubspotData.properties
               }
             })
           });
         }
 
-        // Mostrar no terminal do VS Code qualquer erro que o HubSpot devolva
         if (!hubspotResponse.ok) {
-           const errorData = await hubspotResponse.json();
-           console.error("❌ HubSpot API Error:", JSON.stringify(errorData, null, 2));
+          const errorData = await hubspotResponse.json();
+          console.error("❌ HubSpot API Error:", JSON.stringify(errorData, null, 2));
         } else {
-           console.log("✅ HubSpot Atualizado/Criado com sucesso para:", data.email);
+          console.log("✅ HubSpot Atualizado/Criado com sucesso para:", cleanEmail);
         }
-
       } catch (hubspotError) {
         console.error("❌ Failed to connect to HubSpot:", hubspotError);
       }

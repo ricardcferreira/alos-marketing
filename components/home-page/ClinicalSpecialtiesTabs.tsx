@@ -73,7 +73,7 @@ export default function ClinicalSpecialtiesTabs() {
       tabName: "Desporto",
       title: "Avalie a composição corporal ao milímetro",
       description:
-        "Do alto rendimento ao desporto amador, registe pregas cutâneas, perímetros e diâmetros segundo a metodologia ISAK. A Alos calcula o somatório de pregas para representar a massa gorda do atleta.",
+        "Do alto rendimento ao desporto amador, registe pregas cutâneas, perímetros e diâmetros segundo a metodologia ISAK (nível 2). A Alos calcula o somatório de pregas para representar a massa gorda do atleta.",
       bgSrc: "/dreamy-texture/texture-nine.webp",
       blockframeSrc: "/low-fidelity/desporto.svg",
       activeColor: "bg-alos-blue-light text-alos-blue border border-alos-blue",

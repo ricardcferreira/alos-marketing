@@ -7,7 +7,7 @@ const bentoContent = {
   compliance: {
     title: "Conformidade na área de saúde em Portugal",
     description: "Garantimos sempre que os seus dados são tratados segundo o Regulamento Geral de Proteção de Dados (RGPD), protegendo a sua privacidade e a dos seus doentes.",
-    bgSrc: "/square/doctor-three.webp",
+    bgSrc: "/square/doctor-five.webp",
     blockframeSrc: "/low-fidelity/conformidade.svg",
   },
   interoperability: {
