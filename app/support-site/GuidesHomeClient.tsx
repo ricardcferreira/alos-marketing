@@ -21,11 +21,6 @@ export default function GuidesHomeClient({
   collections: CollectionWithCount[];
 }) {
   const [query, setQuery] = useState("");
-
-  // FIX/ADD: category pills are generated from the real collections list,
-  // not an invented taxonomy — with only one collection today, this shows
-  // one pill + "Todas" until more collections exist, which is correct,
-  // not a bug. null = "Todas" (no category filter applied).
   const [activeCollection, setActiveCollection] = useState<string | null>(null);
 
   const filtered = collections.filter((c) => {
@@ -53,12 +48,12 @@ export default function GuidesHomeClient({
             <Link
               key={c.slug}
               href={`/${c.slug}`}
-              className="group flex flex-col justify-center rounded-2xl border border-cream p-8 transition-all"
+              className="group flex flex-col justify-center rounded-2xl border border-[#212D37]/15 hover:border-[#212D37]/30 p-8 transition-all"
             >
-              <h2 className="font-serif text-2xl text-primary-dark mb-2 group-hover:opacity-70 transition-opacity">
+              <h2 className="font-serif text-2xl text-primary-dark mb-2 transition-opacity">
                 {c.title}
               </h2>
-              <p className="text-sm font-medium group-hover:opacity-70 text-gray-500">
+              <p className="text-sm font-medium text-gray-500">
                 {c.articleCount} {c.articleCount === 1 ? "artigo" : "artigos"}
               </p>
             </Link>

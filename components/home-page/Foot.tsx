@@ -3,8 +3,10 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="relative w-full pt-18 md:pt-62 px-4 md:px-8">
-      
+    <footer
+      style={{ marginTop: "140px" }}
+      className="relative w-full mt-28 md:mt-40 pt-12 sm:pt-32 px-4 md:px-8"
+    >
       <div className="absolute inset-0 z-0 overflow-hidden">
         <Image
           src="/landscape/apples-bg.webp"

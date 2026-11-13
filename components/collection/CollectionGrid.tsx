@@ -34,12 +34,9 @@ export default function CollectionGrid({
     const indexA = categoryOrder.indexOf(a);
     const indexB = categoryOrder.indexOf(b);
 
-    // If both exist in your custom list, sort them by that specific order
     if (indexA !== -1 && indexB !== -1) return indexA - indexB;
-    // If a category isn't in your list, push it to the end
     if (indexA === -1 && indexB !== -1) return 1;
     if (indexA !== -1 && indexB === -1) return -1;
-    // If neither is in the list, sort them alphabetically at the end
     return a.localeCompare(b);
   });
 
@@ -54,11 +51,10 @@ export default function CollectionGrid({
   });
 
   return (
-    <div className="w-full mb-16">
+    <div className="w-full pb-32 md:pb-48">
       
       {/* Bloco de Pesquisa (Floating Container) */}
       <div className="w-full flex justify-center py-20">
-        {/* O container "flutuante" com cantos muito arredondados e fundo bege */}
         <div className="w-full max-w-3xl bg-cream-light rounded-2xl p-4 md:p-6 shadow-lg border border-cream">
           
           {/* Input de Pesquisa */}
@@ -81,8 +77,8 @@ export default function CollectionGrid({
                 onClick={() => setActiveTab(section)}
                 className={`px-4 py-1.5 rounded-sm text-sm font-medium transition-colors ${
                   activeTab === section 
-                    ? "bg-alos-yellow text-alos-brown" // Ativo: Pill escura
-                    : "bg-cream text-primary-dark hover:text-alos-brown hover:bg-alos-yellow" // Inativo: Apenas texto, sem fundo
+                    ? "bg-alos-yellow text-alos-brown"
+                    : "bg-cream text-primary-dark hover:text-alos-brown hover:bg-alos-yellow"
                 }`}
               >
                 {section}
