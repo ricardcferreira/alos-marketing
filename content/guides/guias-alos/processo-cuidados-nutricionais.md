@@ -1,12 +1,13 @@
 ---
-title: "O Processo de Cuidado Nutricional na Alos"
+title: "A digitalização do Processo de Cuidado Nutricional"
 description: "Conheça o seu espaço de decisão nutricional e descubra como a Alos transforma o registo clínico num fluxo estruturado, interligado e mensurável."
 section: "Fluxo de Trabalho"
+image: "illustrations/ncp-cycle.webp"
 order: 1
 authorName: "Francisco Ribeiro"
 authorAvatar: "/portraits/francisco.webp"
-date: "17 September 2026"
-readTime: "4 min read"
+date: "25 Novembro 2026"
+readTime: "4 min leitura"
 ---
 
 Durante anos, a prática da nutrição clínica esteve condicionada por registos em texto livre onde os dados de cada consulta ficavam isolados. Quando a informação clínica não está estruturada, o nutricionista perde tempo em tarefas administrativas repetitivas e o impacto real da intervenção nutricional torna-se difícil de medir e demonstrar.

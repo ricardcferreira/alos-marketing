@@ -62,7 +62,7 @@ export default function CollectionGrid({
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-primary-dark" />
             <input
               type="text"
-              placeholder="Explore Alos Guides"
+              placeholder="Explore Guias Alos"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full h-12 pl-12 pr-4 rounded-sm border border-cream focus:outline-none focus:border-primary-dark bg-white"
@@ -99,18 +99,18 @@ export default function CollectionGrid({
                 {/* Banner de Imagem */}
                 <div className="w-full aspect-[2/1] bg-gradient-to-tl from-white via-alos-green-light to-alos-green rounded-xl overflow-hidden border border-gray-100 relative">
                   {article.image && (
-                    <img src={article.image} alt={article.title} className="w-full h-full object-cover" />
+                    <img src={article.image} alt={article.title} className="w-full h-full object-contain" />
                   )}
                 </div>
                 
                 {/* Conteúdo do Cartão */}
-                <div className="pt-5 pb-4 flex flex-col grow">
-                  <span className="text-xs font-light uppercase tracking-tight text-primary-dark mb-2">
+                <div className="pt-5 pb-4 flex flex-col grow space-y-2">
+                  <span className="text-xs font-light uppercase tracking-tight text-primary-dark">
                     {article.section || "Guia"}
                   </span>
-                  <h4 className="text-xl font-serif text-primary-dark mb-4 transition-opacity">
+                  <p className="text-lg text-primary-dark mb-4 transition-opacity">
                     {article.title}
-                  </h4>
+                  </p>
                   
                   {/* Rodapé (Autor/Data) */}
                   <div className="mt-auto flex items-center gap-3">
