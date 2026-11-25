@@ -97,7 +97,7 @@ export default function CollectionGrid({
               <Link href={`/${collectionSlug}/${article.slug}`} className="block h-full">
                 
                 {/* Banner de Imagem */}
-                <div className="w-full aspect-[2/1] bg-gradient-to-tl from-white via-alos-green-light to-alos-green rounded-xl overflow-hidden border border-gray-100 relative">
+                <div className="w-full aspect-[2/1] bg-cream rounded-xl overflow-hidden border border-gray-100 relative">
                   {article.image && (
                     <img src={article.image} alt={article.title} className="w-full h-full object-contain" />
                   )}
@@ -108,9 +108,9 @@ export default function CollectionGrid({
                   <span className="text-xs font-light uppercase tracking-tight text-primary-dark">
                     {article.section || "Guia"}
                   </span>
-                  <p className="text-lg text-primary-dark mb-4 transition-opacity">
+                  <h4 className="text-xl text-primary-dark mb-4 transition-opacity">
                     {article.title}
-                  </p>
+                  </h4>
                   
                   {/* Rodapé (Autor/Data) */}
                   <div className="mt-auto flex items-center gap-3">
